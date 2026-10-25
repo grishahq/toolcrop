@@ -3,25 +3,80 @@
   "scheduled": false,
   "published": false,
   "timezone": "Asia/Dubai",
+  "checked_at_utc": "2026-10-25T19:44:11.754982+00:00",
   "linkedin": {
     "account": "Gregory Gvadzabia / https://www.linkedin.com/in/gregogv/",
     "reserved_items": 5,
     "scheduled_items": 0,
-    "native_queue_before": "Local private queue readback; public summary: one unrelated scheduled item preserved",
-    "state": "in_progress"
+    "published_items": 0,
+    "state": "blocked_native_media_upload",
+    "queue_url": "https://www.linkedin.com/sharing/compose",
+    "existing_queue": "One unrelated scheduled post observed and preserved; raw readback is local private evidence.",
+    "attempt": "First prepared text and reserved time were entered; assigned image upload failed before any Schedule submission.",
+    "permission_check": "Unknown; internal browser settings page is blocked by browser URL policy."
   },
   "x": {
     "account": "Grisha / @grishahq",
     "prepared_threads": 5,
     "scheduled_threads": 0,
-    "state": "capability_check_pending"
+    "published_threads": 0,
+    "state": "native_thread_scheduling_not_verified",
+    "account_readback": "Authenticated Account menu showed Grisha / @grishahq; profile Edit profile control was present.",
+    "capability_limit": "No connected social publishing tool was exposed. Native thread scheduling support has not been verified."
   },
+  "items": [
+    {
+      "id": "01-problem",
+      "linkedin_state": "reserved_not_scheduled",
+      "reserved_datetime": "2026-11-09T10:00:00+04:00",
+      "x_state": "prepared_not_scheduled",
+      "scheduled_id": null,
+      "published_url": null
+    },
+    {
+      "id": "02-tradeoff",
+      "linkedin_state": "reserved_not_scheduled",
+      "reserved_datetime": "2026-11-11T10:00:00+04:00",
+      "x_state": "prepared_not_scheduled",
+      "scheduled_id": null,
+      "published_url": null
+    },
+    {
+      "id": "03-demo",
+      "linkedin_state": "reserved_not_scheduled",
+      "reserved_datetime": "2026-11-13T10:00:00+04:00",
+      "x_state": "prepared_not_scheduled",
+      "scheduled_id": null,
+      "published_url": null
+    },
+    {
+      "id": "04-experiment",
+      "linkedin_state": "reserved_not_scheduled",
+      "reserved_datetime": "2026-11-16T10:00:00+04:00",
+      "x_state": "prepared_not_scheduled",
+      "scheduled_id": null,
+      "published_url": null
+    },
+    {
+      "id": "05-release",
+      "linkedin_state": "reserved_not_scheduled",
+      "reserved_datetime": "2026-11-18T10:00:00+04:00",
+      "x_state": "prepared_not_scheduled",
+      "scheduled_id": null,
+      "published_url": null
+    }
+  ],
   "blockers": [
-    "Shared native social lock is currently occupied by another project; no lock was stolen."
+    "Native browser operations repeatedly timed out/reset. The Media upload did not yield a filechooser event within 10000 ms; no assigned image or scheduling confirmation was produced.",
+    "Browser policy rejected opening chrome://extensions, so extension file-URL upload access could not be inspected. The user needs to check that setting manually before upload recovery.",
+    "Another live project currently owns the exclusive social lock. No other chat tabs or live lock were taken over.",
+    "Completing scheduling requires a working native media-upload session or an authenticated scheduler that supports the intended image posts and X threads."
   ],
   "evidence": [
     "campaign/character-checks.json",
     "campaign/reserved-slots.json",
-    "evidence/published-artifact-check.json"
+    "evidence/published-artifact-check.json",
+    "evidence/campaign-artifact-check.json",
+    "evidence/native-scheduling-attempts.json"
   ]
 }

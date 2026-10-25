@@ -24,3 +24,9 @@ Same 620 controlled fixture trajectories: schema checks admit 496, error-free ex
 These are deterministic templated fixtures, not measured model generations, independent statistical trials, a model-quality improvement, production-safety evidence or adoption. The held-out schema is explicitly supported by the reference planner and shares task families/grammar. Full upstream GPU/provider integration suites and live provider calls were not run. The adapter plans whole sequences; reactive tool-feedback rollout is future work.
 
 See README, toolcrop_docs/DATA_CARD.md, evidence/README.md, CHANGELOG.md and IMPLEMENTATION_PLAN.md for commands, provenance, roadmap and maintenance scope. v0.2 expands negative cases/coverage and reactive rollout; v0.3 adds another contained environment and requested integrations. This fork is not an official Bespoke Labs release.
+
+## Supplementary reproducibility and campaign assets
+
+The frozen v0.1.0 tag remains at `47c44b9850c181ac9a4d4774e365aa49d29f5b80`. The supplementary `build_task_specs.py` asset reproduces its task registry byte for byte without importing or running the planner/executor. Its authoring notes and verification record are on main.
+
+`toolcrop-campaign-v0.1.0.zip` contains five prepared English LinkedIn posts, five corresponding four-post X threads, two original conceptual illustrations, a genuine report screenshot, a result chart, alt text and provenance. `CAMPAIGN_SHA256SUMS` verifies that bundle. Prepared campaign copy is separate from platform scheduling/publication. Consult the repository's latest STATUS.json and campaign/scheduling-status.json for native readback state; no social publication is implied by this downloadable copy.

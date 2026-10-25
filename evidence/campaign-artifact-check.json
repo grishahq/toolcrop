@@ -1,0 +1,13 @@
+{
+  "state": "passed",
+  "release_asset": "https://github.com/grishahq/toolcrop/releases/download/v0.1.0/toolcrop-campaign-v0.1.0.zip",
+  "sha256": "b3e2662486484e9332b4a10a222b44a1352bbefeb46a7b7c0b17501760e8a88f",
+  "linkedin_posts": 5,
+  "x_threads": 5,
+  "x_posts": 20,
+  "all_assigned_images_present": true,
+  "raw_native_queue_images_in_bundle": false,
+  "social_scheduled": false,
+  "social_published": false,
+  "final_bundle_download_verification": "passed"
+}

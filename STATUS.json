@@ -49,16 +49,30 @@
       "campaign/assets/filter-comparison.png"
     ],
     "account_readback": {
-      "linkedin": "Gregory Gvadzabia / https://www.linkedin.com/in/gregogv/"
+      "linkedin": "Gregory Gvadzabia / https://www.linkedin.com/in/gregogv/",
+      "x": "Grisha / @grishahq"
     },
     "pack": "campaign/CAMPAIGN.md",
     "platform_character_checks": "campaign/character-checks.json",
     "reserved_linkedin_slots": "campaign/reserved-slots.json",
-    "scheduling_in_progress": true
+    "scheduling_in_progress": false,
+    "state": "prepared_scheduling_blocked",
+    "linkedin_reserved": 5,
+    "linkedin_scheduled": 0,
+    "x_prepared_threads": 5,
+    "x_scheduled_threads": 0,
+    "scheduling_evidence": "campaign/scheduling-status.json",
+    "downloadable_campaign": "https://github.com/grishahq/toolcrop/releases/download/v0.1.0/toolcrop-campaign-v0.1.0.zip"
   },
-  "blockers": [],
+  "blockers": [
+    "Native browser operations repeatedly timed out/reset. The Media upload did not yield a filechooser event within 10000 ms; no assigned image or scheduling confirmation was produced.",
+    "Browser policy rejected opening chrome://extensions, so extension file-URL upload access could not be inspected. The user needs to check that setting manually before upload recovery.",
+    "Another live project currently owns the exclusive social lock. No other chat tabs or live lock were taken over.",
+    "Completing scheduling requires a working native media-upload session or an authenticated scheduler that supports the intended image posts and X threads."
+  ],
   "next_actions": [
-    "Publish versioned experimental release",
-    "Finalize campaign and native scheduling"
+    "User checks ChatGPT Chrome extension Allow access to file URLs setting; internal extension settings are blocked to the browser tool",
+    "Acquire portfolio social lock before resuming; inspect current queues and reservations",
+    "Schedule the five prepared items per platform and save actual readback IDs/URLs; do not relabel reservations as scheduled"
   ]
 }

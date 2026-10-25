@@ -1,0 +1,33 @@
+{
+  "results": [
+    {
+      "action": "Navigate to authenticated X profile",
+      "result": "Initial navigation timed out and kernel reset; later account readback succeeded."
+    },
+    {
+      "action": "Reconnect to own LinkedIn tab and open home",
+      "result": "Initial combined action timed out and reset. Reconnect with longer timeout succeeded."
+    },
+    {
+      "action": "Inspect existing LinkedIn queue",
+      "result": "Succeeded; one unrelated post preserved; five later portfolio slots reserved without conflicts."
+    },
+    {
+      "action": "Set first reserved time and prepared text",
+      "result": "Succeeded; composer showed Posting at Mon, Nov 9, 10:00 AM and prepared ToolCrop problem post."
+    },
+    {
+      "action": "Upload assigned concept image using Media/filechooser",
+      "result": "Timed out after 10000ms waiting for file chooser; kernel reset. Readback retained text and link preview, no assigned campaign image or schedule confirmation."
+    },
+    {
+      "action": "Inspect Chrome extension upload access without changing permissions",
+      "result": "Automatic browser approval review rejected chrome://extensions because the chrome URL scheme is not allowed; user input is required to inspect the setting."
+    }
+  ],
+  "schedule_submissions": 0,
+  "confirmed_scheduled_items": 0,
+  "actual_social_publications": 0,
+  "raw_native_queue_evidence": "Retained locally under .private-evidence; omitted from public campaign to avoid exposing unrelated queue contents.",
+  "shared_lock": "Released own lock after failed media attempt; current live lock belongs to CaseSprout."
+}
