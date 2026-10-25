@@ -1,0 +1,60 @@
+{
+  "method": "LinkedIn <=3000; ASCII X copy <=280 weighted characters, URLs count as 23; alt text <=1000",
+  "checks": [
+    {
+      "id": "01-problem",
+      "linkedin_characters": 1400,
+      "x_weighted_characters": [
+        186,
+        222,
+        216,
+        199
+      ],
+      "alt_text_characters": 251
+    },
+    {
+      "id": "02-tradeoff",
+      "linkedin_characters": 1559,
+      "x_weighted_characters": [
+        196,
+        223,
+        232,
+        205
+      ],
+      "alt_text_characters": 240
+    },
+    {
+      "id": "03-demo",
+      "linkedin_characters": 1450,
+      "x_weighted_characters": [
+        203,
+        177,
+        240,
+        163
+      ],
+      "alt_text_characters": 287
+    },
+    {
+      "id": "04-experiment",
+      "linkedin_characters": 1635,
+      "x_weighted_characters": [
+        193,
+        240,
+        230,
+        198
+      ],
+      "alt_text_characters": 321
+    },
+    {
+      "id": "05-release",
+      "linkedin_characters": 1628,
+      "x_weighted_characters": [
+        183,
+        217,
+        220,
+        254
+      ],
+      "alt_text_characters": 298
+    }
+  ]
+}

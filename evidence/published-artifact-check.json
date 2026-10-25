@@ -1,0 +1,13 @@
+{
+  "public_unauthenticated_release_read": "passed",
+  "release_url": "https://github.com/grishahq/toolcrop/releases/tag/v0.1.0",
+  "draft": false,
+  "prerelease": true,
+  "published_at_utc": "2026-10-25T19:18:36Z",
+  "annotated_tag_object": "43b842d25182bf9909ea7683809dac7eaafd199e",
+  "tag_commit": "47c44b9850c181ac9a4d4774e365aa49d29f5b80",
+  "downloaded_checksums": "all matching",
+  "source_history_base": "7fa08c5207c3b1fd5c1d0f15f1dc25a6547a3d8a",
+  "published_clean_install": "passed",
+  "deterministic_output_hashes": "all matching"
+}

@@ -1,0 +1,9 @@
+{
+  "state": "passed",
+  "source": "scripts/build_task_specs.py",
+  "output_matches_frozen_registry": true,
+  "sha256": "d287454f8087fe4171a36ac98b0e6c8e73873466685b839bf176cc0ed79e00b4",
+  "development_tasks": 100,
+  "heldout_tasks": 24,
+  "independence": "Spec authoring imports no trajectory generator, executor or validator"
+}

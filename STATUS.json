@@ -24,14 +24,22 @@
     "limitations": [
       "No live provider inference or model training experiment",
       "Full upstream provider/GPU suites not run"
-    ]
+    ],
+    "published_artifact_clean_install": "passed"
   },
   "github_release": {
-    "state": "repository_created",
-    "repository": "https://github.com/grishahq/toolcrop"
+    "state": "published_and_verified",
+    "repository": "https://github.com/grishahq/toolcrop",
+    "url": "https://github.com/grishahq/toolcrop/releases/tag/v0.1.0",
+    "tag": "v0.1.0",
+    "commit": "47c44b9850c181ac9a4d4774e365aa49d29f5b80",
+    "prerelease": true,
+    "public_readback": "evidence/published-release.json",
+    "artifact_verification": "evidence/published-artifact-check.json",
+    "ci": "https://github.com/grishahq/toolcrop/actions/runs/40225565726"
   },
   "campaign": {
-    "prepared": false,
+    "prepared": true,
     "scheduled": false,
     "published": false,
     "assets": [
@@ -42,7 +50,11 @@
     ],
     "account_readback": {
       "linkedin": "Gregory Gvadzabia / https://www.linkedin.com/in/gregogv/"
-    }
+    },
+    "pack": "campaign/CAMPAIGN.md",
+    "platform_character_checks": "campaign/character-checks.json",
+    "reserved_linkedin_slots": "campaign/reserved-slots.json",
+    "scheduling_in_progress": true
   },
   "blockers": [],
   "next_actions": [

@@ -1,0 +1,27 @@
+{
+  "prepared": true,
+  "scheduled": false,
+  "published": false,
+  "timezone": "Asia/Dubai",
+  "linkedin": {
+    "account": "Gregory Gvadzabia / https://www.linkedin.com/in/gregogv/",
+    "reserved_items": 5,
+    "scheduled_items": 0,
+    "native_queue_before": "Local private queue readback; public summary: one unrelated scheduled item preserved",
+    "state": "in_progress"
+  },
+  "x": {
+    "account": "Grisha / @grishahq",
+    "prepared_threads": 5,
+    "scheduled_threads": 0,
+    "state": "capability_check_pending"
+  },
+  "blockers": [
+    "Shared native social lock is currently occupied by another project; no lock was stolen."
+  ],
+  "evidence": [
+    "campaign/character-checks.json",
+    "campaign/reserved-slots.json",
+    "evidence/published-artifact-check.json"
+  ]
+}

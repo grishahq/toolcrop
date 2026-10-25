@@ -1,0 +1,52 @@
+[
+  {
+    "project": "toolcrop",
+    "platform": "linkedin",
+    "item": 1,
+    "datetime": "2026-11-09T10:00:00+04:00",
+    "state": "reserved",
+    "account": "https://www.linkedin.com/in/gregogv/",
+    "native_queue_before": "One unrelated recursive-llm post on 2026-10-26 at 03:14; preserved. Existing JudgeMeter reservations respected.",
+    "timezone": "Asia/Dubai"
+  },
+  {
+    "project": "toolcrop",
+    "platform": "linkedin",
+    "item": 2,
+    "datetime": "2026-11-11T10:00:00+04:00",
+    "state": "reserved",
+    "account": "https://www.linkedin.com/in/gregogv/",
+    "native_queue_before": "One unrelated recursive-llm post on 2026-10-26 at 03:14; preserved. Existing JudgeMeter reservations respected.",
+    "timezone": "Asia/Dubai"
+  },
+  {
+    "project": "toolcrop",
+    "platform": "linkedin",
+    "item": 3,
+    "datetime": "2026-11-13T10:00:00+04:00",
+    "state": "reserved",
+    "account": "https://www.linkedin.com/in/gregogv/",
+    "native_queue_before": "One unrelated recursive-llm post on 2026-10-26 at 03:14; preserved. Existing JudgeMeter reservations respected.",
+    "timezone": "Asia/Dubai"
+  },
+  {
+    "project": "toolcrop",
+    "platform": "linkedin",
+    "item": 4,
+    "datetime": "2026-11-16T10:00:00+04:00",
+    "state": "reserved",
+    "account": "https://www.linkedin.com/in/gregogv/",
+    "native_queue_before": "One unrelated recursive-llm post on 2026-10-26 at 03:14; preserved. Existing JudgeMeter reservations respected.",
+    "timezone": "Asia/Dubai"
+  },
+  {
+    "project": "toolcrop",
+    "platform": "linkedin",
+    "item": 5,
+    "datetime": "2026-11-18T10:00:00+04:00",
+    "state": "reserved",
+    "account": "https://www.linkedin.com/in/gregogv/",
+    "native_queue_before": "One unrelated recursive-llm post on 2026-10-26 at 03:14; preserved. Existing JudgeMeter reservations respected.",
+    "timezone": "Asia/Dubai"
+  }
+]
