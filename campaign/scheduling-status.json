@@ -78,5 +78,6 @@
     "evidence/published-artifact-check.json",
     "evidence/campaign-artifact-check.json",
     "evidence/native-scheduling-attempts.json"
-  ]
+  ],
+  "fallback_integration": "Publishing integration discovery completed; no authenticated publishing connector was available."
 }

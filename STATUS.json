@@ -62,7 +62,8 @@
     "x_prepared_threads": 5,
     "x_scheduled_threads": 0,
     "scheduling_evidence": "campaign/scheduling-status.json",
-    "downloadable_campaign": "https://github.com/grishahq/toolcrop/releases/download/v0.1.0/toolcrop-campaign-v0.1.0.zip"
+    "downloadable_campaign": "https://github.com/grishahq/toolcrop/releases/download/v0.1.0/toolcrop-campaign-v0.1.0.zip",
+    "fallback_integration": "Relevant publishing integration discovered; an authenticated connection was not available in this session."
   },
   "blockers": [
     "Native browser operations repeatedly timed out/reset. The Media upload did not yield a filechooser event within 10000 ms; no assigned image or scheduling confirmation was produced.",
