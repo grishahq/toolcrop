@@ -1,0 +1,7 @@
+{
+  "asset": "assets/concept-destination.png",
+  "mode": "built-in image_gen",
+  "prompt": "Use case: ads-marketing. Asset type: English open-source campaign conceptual illustration, landscape. Primary request: A tasteful tactile editorial illustration for ToolCrop showing why executing a tool sequence is not enough: a small mint-green parcel travels along a precise brass-and-paper route, but an independent destination card guides it to the correct dock. Show a fork in the route, with a warm amber side path ending at a wrong dock and a mint route reaching a matching destination marker. This is a conceptual metaphor only, never a software screenshot or empirical chart. Style: paper sculpture and transparent mechanical details, dark navy background, mint and amber palette, restrained studio lighting, generous negative space and crisp typography. Text verbatim: 'ToolCrop' and 'Check the destination, too'. No other text, numbers, percentages, testimonials or other brand logos.",
+  "source": "/Users/g/.codex/generated_images/01a1746d-ef1b-7162-b7ee-29408e99c3c4/exec-da14492d-297a-4c96-a27f-c9042ae05121.png",
+  "inspection": "Readable ToolCrop and Check the destination, too. Conceptual forked parcel route; no fabricated metric or UI."
+}

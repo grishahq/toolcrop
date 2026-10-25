@@ -1,0 +1,73 @@
+{
+  "output": ".release-check/reproduced-cli",
+  "overall": {
+    "candidates": 620,
+    "schema_valid": 496,
+    "executable": 372,
+    "accepted": 124,
+    "acceptance_rate": 0.2,
+    "executable_success_rate": 0.6,
+    "rejection_reasons": {
+      "call_0:insufficient_reserved": 124,
+      "call_0:unavailable_tool": 124,
+      "final_available_mismatch": 331,
+      "final_reserved_mismatch": 124,
+      "final_shipments_mismatch": 290,
+      "required_state_not_reached": 117
+    }
+  },
+  "by_split": {
+    "development": {
+      "candidates": 500,
+      "schema_valid": 400,
+      "executable": 300,
+      "accepted": 100,
+      "acceptance_rate": 0.2,
+      "executable_success_rate": 0.6,
+      "rejection_reasons": {
+        "call_0:insufficient_reserved": 100,
+        "call_0:unavailable_tool": 100,
+        "final_available_mismatch": 267,
+        "final_reserved_mismatch": 100,
+        "final_shipments_mismatch": 234,
+        "required_state_not_reached": 94
+      },
+      "task_coverage": {
+        "accepted_unique_tasks": 100,
+        "specified_tasks": 100,
+        "rate": 1.0
+      },
+      "family_coverage": {
+        "hold_release": 33,
+        "single_ship": 34,
+        "split_ship": 33
+      }
+    },
+    "heldout": {
+      "candidates": 120,
+      "schema_valid": 96,
+      "executable": 72,
+      "accepted": 24,
+      "acceptance_rate": 0.2,
+      "executable_success_rate": 0.6,
+      "rejection_reasons": {
+        "call_0:insufficient_reserved": 24,
+        "call_0:unavailable_tool": 24,
+        "final_available_mismatch": 64,
+        "final_reserved_mismatch": 24,
+        "final_shipments_mismatch": 56,
+        "required_state_not_reached": 23
+      },
+      "task_coverage": {
+        "accepted_unique_tasks": 24,
+        "specified_tasks": 24,
+        "rate": 1.0
+      },
+      "family_coverage": {
+        "hold_release": 8,
+        "single_ship": 8,
+        "split_ship": 8
+      }
+    }
+  }
+}

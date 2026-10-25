@@ -5,7 +5,10 @@ import importlib.metadata
 try:
     __version__ = importlib.metadata.version("bespokelabs-curator")
 except importlib.metadata.PackageNotFoundError:
-    __version__ = "unknown"
+    try:
+        __version__ = importlib.metadata.version("toolcrop-curator")
+    except importlib.metadata.PackageNotFoundError:
+        __version__ = "unknown"
 
 from .code_executor.code_executor import CodeExecutor
 from .finetune.config import FireworksTrainerConfig, TinkerTrainerConfig

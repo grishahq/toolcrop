@@ -1,0 +1,3 @@
+{"task_id": "development-000", "calls": [{"name": "reserve", "arguments": {"sku": "DEV-000", "quantity": 1}}, {"name": "ship", "arguments": {"sku": "DEV-000", "quantity": 1, "destination": "DEV-DOCK-0"}}]}
+{"task_id": "development-001", "calls": [{"name": "reserve", "arguments": {"sku": "DEV-001", "quantity": 2}}, {"name": "ship", "arguments": {"sku": "DEV-001", "quantity": 2, "destination": "DEV-DOCK-1"}}, {"name": "reserve", "arguments": {"sku": "DEV-001", "quantity": 1}}, {"name": "ship", "arguments": {"sku": "DEV-001", "quantity": 1, "destination": "DEV-BACKUP-1"}}]}
+{"task_id": "development-002", "calls": [{"name": "reserve", "arguments": {"sku": "DEV-002", "quantity": 3}}, {"name": "cancel", "arguments": {"sku": "DEV-002", "quantity": 3}}]}

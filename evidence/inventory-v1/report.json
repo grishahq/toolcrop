@@ -1,0 +1,146 @@
+{
+  "by_source": {
+    "missing_required_step": {
+      "acceptance_rate": 0.0,
+      "accepted": 0,
+      "candidates": 124,
+      "executable": 0,
+      "executable_success_rate": 0.0,
+      "rejection_reasons": {
+        "call_0:insufficient_reserved": 124,
+        "final_available_mismatch": 83,
+        "final_shipments_mismatch": 83,
+        "required_state_not_reached": 41
+      },
+      "schema_valid": 124
+    },
+    "reference_planner": {
+      "acceptance_rate": 1.0,
+      "accepted": 124,
+      "candidates": 124,
+      "executable": 124,
+      "executable_success_rate": 1.0,
+      "rejection_reasons": {},
+      "schema_valid": 124
+    },
+    "unavailable_tool": {
+      "acceptance_rate": 0.0,
+      "accepted": 0,
+      "candidates": 124,
+      "executable": 0,
+      "executable_success_rate": 0.0,
+      "rejection_reasons": {
+        "call_0:unavailable_tool": 124,
+        "final_available_mismatch": 83,
+        "final_shipments_mismatch": 83,
+        "required_state_not_reached": 41
+      },
+      "schema_valid": 0
+    },
+    "wrong_argument": {
+      "acceptance_rate": 0.0,
+      "accepted": 0,
+      "candidates": 124,
+      "executable": 124,
+      "executable_success_rate": 1.0,
+      "rejection_reasons": {
+        "final_available_mismatch": 124,
+        "final_reserved_mismatch": 124,
+        "required_state_not_reached": 35
+      },
+      "schema_valid": 124
+    },
+    "wrong_destination": {
+      "acceptance_rate": 0.0,
+      "accepted": 0,
+      "candidates": 124,
+      "executable": 124,
+      "executable_success_rate": 1.0,
+      "rejection_reasons": {
+        "final_available_mismatch": 41,
+        "final_shipments_mismatch": 124
+      },
+      "schema_valid": 124
+    }
+  },
+  "by_split": {
+    "development": {
+      "acceptance_rate": 0.2,
+      "accepted": 100,
+      "candidates": 500,
+      "executable": 300,
+      "executable_success_rate": 0.6,
+      "family_coverage": {
+        "hold_release": 33,
+        "single_ship": 34,
+        "split_ship": 33
+      },
+      "rejection_reasons": {
+        "call_0:insufficient_reserved": 100,
+        "call_0:unavailable_tool": 100,
+        "final_available_mismatch": 267,
+        "final_reserved_mismatch": 100,
+        "final_shipments_mismatch": 234,
+        "required_state_not_reached": 94
+      },
+      "schema_valid": 400,
+      "task_coverage": {
+        "accepted_unique_tasks": 100,
+        "rate": 1.0,
+        "specified_tasks": 100
+      }
+    },
+    "heldout": {
+      "acceptance_rate": 0.2,
+      "accepted": 24,
+      "candidates": 120,
+      "executable": 72,
+      "executable_success_rate": 0.6,
+      "family_coverage": {
+        "hold_release": 8,
+        "single_ship": 8,
+        "split_ship": 8
+      },
+      "rejection_reasons": {
+        "call_0:insufficient_reserved": 24,
+        "call_0:unavailable_tool": 24,
+        "final_available_mismatch": 64,
+        "final_reserved_mismatch": 24,
+        "final_shipments_mismatch": 56,
+        "required_state_not_reached": 23
+      },
+      "schema_valid": 96,
+      "task_coverage": {
+        "accepted_unique_tasks": 24,
+        "rate": 1.0,
+        "specified_tasks": 24
+      }
+    }
+  },
+  "format_version": 1,
+  "limits": [
+    "124 templated tasks in one toy environment; counts are descriptive, not independent statistical trials.",
+    "Held-out tasks have disjoint item identifiers and tool schemas but share task grammar and families.",
+    "Offline planner supports both schemas explicitly. This is not evidence of model generalization or quality gain.",
+    "Accepted means exact declared final state and required checkpoints were reached without error; policy optimality is not judged."
+  ],
+  "maturity": "experimental",
+  "methodology": "Fixed reference planner and any included predefined corruptions; see source counts. No model generation or training experiment.",
+  "overall": {
+    "acceptance_rate": 0.2,
+    "accepted": 124,
+    "candidates": 620,
+    "executable": 372,
+    "executable_success_rate": 0.6,
+    "rejection_reasons": {
+      "call_0:insufficient_reserved": 124,
+      "call_0:unavailable_tool": 124,
+      "final_available_mismatch": 331,
+      "final_reserved_mismatch": 124,
+      "final_shipments_mismatch": 290,
+      "required_state_not_reached": 117
+    },
+    "schema_valid": 496
+  },
+  "recipe": "inventory-v1"
+}

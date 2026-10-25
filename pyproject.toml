@@ -1,21 +1,27 @@
 [tool.poetry]
-name = "bespokelabs-curator"
-version = "0.1.29"
-description = "Bespoke Labs Curator"
+name = "toolcrop-curator"
+version = "0.1.0"
+description = "ToolCrop: execution-validated tool-use datasets, built on Curator"
 authors = ["Bespoke Labs <company@bespokelabs.ai>"]
 readme = "README.md"
 packages = [
     {include = "bespokelabs/curator", from = "src"},
+    {include = "toolcrop", from = "src"},
 ]
 include = [
-    "src/bespokelabs/curator/viewer/static/**/*"
+    "src/bespokelabs/curator/viewer/static/**/*",
+    {path = "recipe_tests", format = "sdist"},
+    {path = "toolcrop_docs", format = "sdist"},
+    {path = "scripts", format = "sdist"},
+    {path = "evidence", format = "sdist"},
+    {path = "campaign/assets/real-report-screenshot.jpg", format = "sdist"}
 ]
 exclude = [
     "src/bespokelabs/curator/viewer/static/.next/cache/**/*"
 ]
 license = "Apache-2.0"
 homepage = "https://github.com/bespokelabsai/curator"
-repository = "https://github.com/bespokelabsai/curator"
+repository = "https://github.com/grishahq/toolcrop"
 keywords = ["ai", "curator", "bespoke"]
 
 [tool.poetry.dependencies]
@@ -63,6 +69,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
+toolcrop = "toolcrop.cli:main"
 curator-viewer = "bespokelabs.curator.viewer.__main__:main"
 
 [tool.ruff]

@@ -1,0 +1,23 @@
+name: ToolCrop offline validation
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    env:
+      TELEMETRY_ENABLED: 'false'
+      CURATOR_VIEWER: 'false'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -e . pytest pytest-asyncio vcrpy pytest-timeout pytest-dependency ruff
+      - run: ruff check src/toolcrop recipe_tests --select E,F,I,B
+      - run: ruff format src/toolcrop recipe_tests --check
+      - run: python -m pytest recipe_tests tests/unittests/test_prompt_formatter.py tests/unittests/test_dataset_conversion.py tests/unittests/test_namespace.py tests/unittests/test_db_schema.py -q
+      - run: python -m toolcrop demo --output /tmp/toolcrop-reproduced
+      - run: diff evidence/inventory-v1/checksums.json /tmp/toolcrop-reproduced/checksums.json

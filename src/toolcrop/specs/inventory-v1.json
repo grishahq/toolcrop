@@ -1,0 +1,4669 @@
+[
+  {
+    "id": "development-000",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 1 units of DEV-000 to DEV-DOCK-0",
+    "initial": {
+      "available": {
+        "DEV-000": 7,
+        "DEV-SPARE-000": 9
+      },
+      "reserved": {
+        "DEV-000": 0,
+        "DEV-SPARE-000": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-000": 6,
+        "DEV-SPARE-000": 9
+      },
+      "reserved": {
+        "DEV-000": 0,
+        "DEV-SPARE-000": 0
+      },
+      "shipments": {
+        "DEV-DOCK-0": {
+          "DEV-000": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-001",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 2 units of DEV-001 to DEV-DOCK-1; Ship 1 units of DEV-001 to DEV-BACKUP-1",
+    "initial": {
+      "available": {
+        "DEV-001": 10,
+        "DEV-SPARE-001": 9
+      },
+      "reserved": {
+        "DEV-001": 0,
+        "DEV-SPARE-001": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-001": 7,
+        "DEV-SPARE-001": 9
+      },
+      "reserved": {
+        "DEV-001": 0,
+        "DEV-SPARE-001": 0
+      },
+      "shipments": {
+        "DEV-DOCK-1": {
+          "DEV-001": 2
+        },
+        "DEV-BACKUP-1": {
+          "DEV-001": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-002",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 3 units of DEV-002",
+    "initial": {
+      "available": {
+        "DEV-002": 13,
+        "DEV-SPARE-002": 9
+      },
+      "reserved": {
+        "DEV-002": 0,
+        "DEV-SPARE-002": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-002": 13,
+        "DEV-SPARE-002": 9
+      },
+      "reserved": {
+        "DEV-002": 0,
+        "DEV-SPARE-002": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-002": 10,
+          "DEV-SPARE-002": 9
+        },
+        "reserved": {
+          "DEV-002": 3,
+          "DEV-SPARE-002": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-003",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 4 units of DEV-003 to DEV-DOCK-3",
+    "initial": {
+      "available": {
+        "DEV-003": 16,
+        "DEV-SPARE-003": 9
+      },
+      "reserved": {
+        "DEV-003": 0,
+        "DEV-SPARE-003": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-003": 12,
+        "DEV-SPARE-003": 9
+      },
+      "reserved": {
+        "DEV-003": 0,
+        "DEV-SPARE-003": 0
+      },
+      "shipments": {
+        "DEV-DOCK-3": {
+          "DEV-003": 4
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-004",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 5 units of DEV-004 to DEV-DOCK-4; Ship 1 units of DEV-004 to DEV-BACKUP-0",
+    "initial": {
+      "available": {
+        "DEV-004": 19,
+        "DEV-SPARE-004": 9
+      },
+      "reserved": {
+        "DEV-004": 0,
+        "DEV-SPARE-004": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-004": 13,
+        "DEV-SPARE-004": 9
+      },
+      "reserved": {
+        "DEV-004": 0,
+        "DEV-SPARE-004": 0
+      },
+      "shipments": {
+        "DEV-DOCK-4": {
+          "DEV-004": 5
+        },
+        "DEV-BACKUP-0": {
+          "DEV-004": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-005",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 6 units of DEV-005",
+    "initial": {
+      "available": {
+        "DEV-005": 22,
+        "DEV-SPARE-005": 9
+      },
+      "reserved": {
+        "DEV-005": 0,
+        "DEV-SPARE-005": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-005": 22,
+        "DEV-SPARE-005": 9
+      },
+      "reserved": {
+        "DEV-005": 0,
+        "DEV-SPARE-005": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-005": 16,
+          "DEV-SPARE-005": 9
+        },
+        "reserved": {
+          "DEV-005": 6,
+          "DEV-SPARE-005": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-006",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 7 units of DEV-006 to DEV-DOCK-1",
+    "initial": {
+      "available": {
+        "DEV-006": 25,
+        "DEV-SPARE-006": 9
+      },
+      "reserved": {
+        "DEV-006": 0,
+        "DEV-SPARE-006": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-006": 18,
+        "DEV-SPARE-006": 9
+      },
+      "reserved": {
+        "DEV-006": 0,
+        "DEV-SPARE-006": 0
+      },
+      "shipments": {
+        "DEV-DOCK-1": {
+          "DEV-006": 7
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-007",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 1 units of DEV-007 to DEV-DOCK-2; Ship 1 units of DEV-007 to DEV-BACKUP-3",
+    "initial": {
+      "available": {
+        "DEV-007": 7,
+        "DEV-SPARE-007": 9
+      },
+      "reserved": {
+        "DEV-007": 0,
+        "DEV-SPARE-007": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-007": 5,
+        "DEV-SPARE-007": 9
+      },
+      "reserved": {
+        "DEV-007": 0,
+        "DEV-SPARE-007": 0
+      },
+      "shipments": {
+        "DEV-DOCK-2": {
+          "DEV-007": 1
+        },
+        "DEV-BACKUP-3": {
+          "DEV-007": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-008",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 2 units of DEV-008",
+    "initial": {
+      "available": {
+        "DEV-008": 10,
+        "DEV-SPARE-008": 9
+      },
+      "reserved": {
+        "DEV-008": 0,
+        "DEV-SPARE-008": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-008": 10,
+        "DEV-SPARE-008": 9
+      },
+      "reserved": {
+        "DEV-008": 0,
+        "DEV-SPARE-008": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-008": 8,
+          "DEV-SPARE-008": 9
+        },
+        "reserved": {
+          "DEV-008": 2,
+          "DEV-SPARE-008": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-009",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 3 units of DEV-009 to DEV-DOCK-4",
+    "initial": {
+      "available": {
+        "DEV-009": 13,
+        "DEV-SPARE-009": 9
+      },
+      "reserved": {
+        "DEV-009": 0,
+        "DEV-SPARE-009": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-009": 10,
+        "DEV-SPARE-009": 9
+      },
+      "reserved": {
+        "DEV-009": 0,
+        "DEV-SPARE-009": 0
+      },
+      "shipments": {
+        "DEV-DOCK-4": {
+          "DEV-009": 3
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-010",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 4 units of DEV-010 to DEV-DOCK-0; Ship 1 units of DEV-010 to DEV-BACKUP-2",
+    "initial": {
+      "available": {
+        "DEV-010": 16,
+        "DEV-SPARE-010": 9
+      },
+      "reserved": {
+        "DEV-010": 0,
+        "DEV-SPARE-010": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-010": 11,
+        "DEV-SPARE-010": 9
+      },
+      "reserved": {
+        "DEV-010": 0,
+        "DEV-SPARE-010": 0
+      },
+      "shipments": {
+        "DEV-DOCK-0": {
+          "DEV-010": 4
+        },
+        "DEV-BACKUP-2": {
+          "DEV-010": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-011",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 5 units of DEV-011",
+    "initial": {
+      "available": {
+        "DEV-011": 19,
+        "DEV-SPARE-011": 9
+      },
+      "reserved": {
+        "DEV-011": 0,
+        "DEV-SPARE-011": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-011": 19,
+        "DEV-SPARE-011": 9
+      },
+      "reserved": {
+        "DEV-011": 0,
+        "DEV-SPARE-011": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-011": 14,
+          "DEV-SPARE-011": 9
+        },
+        "reserved": {
+          "DEV-011": 5,
+          "DEV-SPARE-011": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-012",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 6 units of DEV-012 to DEV-DOCK-2",
+    "initial": {
+      "available": {
+        "DEV-012": 22,
+        "DEV-SPARE-012": 9
+      },
+      "reserved": {
+        "DEV-012": 0,
+        "DEV-SPARE-012": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-012": 16,
+        "DEV-SPARE-012": 9
+      },
+      "reserved": {
+        "DEV-012": 0,
+        "DEV-SPARE-012": 0
+      },
+      "shipments": {
+        "DEV-DOCK-2": {
+          "DEV-012": 6
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-013",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 7 units of DEV-013 to DEV-DOCK-3; Ship 1 units of DEV-013 to DEV-BACKUP-1",
+    "initial": {
+      "available": {
+        "DEV-013": 25,
+        "DEV-SPARE-013": 9
+      },
+      "reserved": {
+        "DEV-013": 0,
+        "DEV-SPARE-013": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-013": 17,
+        "DEV-SPARE-013": 9
+      },
+      "reserved": {
+        "DEV-013": 0,
+        "DEV-SPARE-013": 0
+      },
+      "shipments": {
+        "DEV-DOCK-3": {
+          "DEV-013": 7
+        },
+        "DEV-BACKUP-1": {
+          "DEV-013": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-014",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 1 units of DEV-014",
+    "initial": {
+      "available": {
+        "DEV-014": 7,
+        "DEV-SPARE-014": 9
+      },
+      "reserved": {
+        "DEV-014": 0,
+        "DEV-SPARE-014": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-014": 7,
+        "DEV-SPARE-014": 9
+      },
+      "reserved": {
+        "DEV-014": 0,
+        "DEV-SPARE-014": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-014": 6,
+          "DEV-SPARE-014": 9
+        },
+        "reserved": {
+          "DEV-014": 1,
+          "DEV-SPARE-014": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-015",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 2 units of DEV-015 to DEV-DOCK-0",
+    "initial": {
+      "available": {
+        "DEV-015": 10,
+        "DEV-SPARE-015": 9
+      },
+      "reserved": {
+        "DEV-015": 0,
+        "DEV-SPARE-015": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-015": 8,
+        "DEV-SPARE-015": 9
+      },
+      "reserved": {
+        "DEV-015": 0,
+        "DEV-SPARE-015": 0
+      },
+      "shipments": {
+        "DEV-DOCK-0": {
+          "DEV-015": 2
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-016",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 3 units of DEV-016 to DEV-DOCK-1; Ship 1 units of DEV-016 to DEV-BACKUP-0",
+    "initial": {
+      "available": {
+        "DEV-016": 13,
+        "DEV-SPARE-016": 9
+      },
+      "reserved": {
+        "DEV-016": 0,
+        "DEV-SPARE-016": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-016": 9,
+        "DEV-SPARE-016": 9
+      },
+      "reserved": {
+        "DEV-016": 0,
+        "DEV-SPARE-016": 0
+      },
+      "shipments": {
+        "DEV-DOCK-1": {
+          "DEV-016": 3
+        },
+        "DEV-BACKUP-0": {
+          "DEV-016": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-017",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 4 units of DEV-017",
+    "initial": {
+      "available": {
+        "DEV-017": 16,
+        "DEV-SPARE-017": 9
+      },
+      "reserved": {
+        "DEV-017": 0,
+        "DEV-SPARE-017": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-017": 16,
+        "DEV-SPARE-017": 9
+      },
+      "reserved": {
+        "DEV-017": 0,
+        "DEV-SPARE-017": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-017": 12,
+          "DEV-SPARE-017": 9
+        },
+        "reserved": {
+          "DEV-017": 4,
+          "DEV-SPARE-017": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-018",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 5 units of DEV-018 to DEV-DOCK-3",
+    "initial": {
+      "available": {
+        "DEV-018": 19,
+        "DEV-SPARE-018": 9
+      },
+      "reserved": {
+        "DEV-018": 0,
+        "DEV-SPARE-018": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-018": 14,
+        "DEV-SPARE-018": 9
+      },
+      "reserved": {
+        "DEV-018": 0,
+        "DEV-SPARE-018": 0
+      },
+      "shipments": {
+        "DEV-DOCK-3": {
+          "DEV-018": 5
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-019",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 6 units of DEV-019 to DEV-DOCK-4; Ship 1 units of DEV-019 to DEV-BACKUP-3",
+    "initial": {
+      "available": {
+        "DEV-019": 22,
+        "DEV-SPARE-019": 9
+      },
+      "reserved": {
+        "DEV-019": 0,
+        "DEV-SPARE-019": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-019": 15,
+        "DEV-SPARE-019": 9
+      },
+      "reserved": {
+        "DEV-019": 0,
+        "DEV-SPARE-019": 0
+      },
+      "shipments": {
+        "DEV-DOCK-4": {
+          "DEV-019": 6
+        },
+        "DEV-BACKUP-3": {
+          "DEV-019": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-020",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 7 units of DEV-020",
+    "initial": {
+      "available": {
+        "DEV-020": 25,
+        "DEV-SPARE-020": 9
+      },
+      "reserved": {
+        "DEV-020": 0,
+        "DEV-SPARE-020": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-020": 25,
+        "DEV-SPARE-020": 9
+      },
+      "reserved": {
+        "DEV-020": 0,
+        "DEV-SPARE-020": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-020": 18,
+          "DEV-SPARE-020": 9
+        },
+        "reserved": {
+          "DEV-020": 7,
+          "DEV-SPARE-020": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-021",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 1 units of DEV-021 to DEV-DOCK-1",
+    "initial": {
+      "available": {
+        "DEV-021": 7,
+        "DEV-SPARE-021": 9
+      },
+      "reserved": {
+        "DEV-021": 0,
+        "DEV-SPARE-021": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-021": 6,
+        "DEV-SPARE-021": 9
+      },
+      "reserved": {
+        "DEV-021": 0,
+        "DEV-SPARE-021": 0
+      },
+      "shipments": {
+        "DEV-DOCK-1": {
+          "DEV-021": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-022",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 2 units of DEV-022 to DEV-DOCK-2; Ship 1 units of DEV-022 to DEV-BACKUP-2",
+    "initial": {
+      "available": {
+        "DEV-022": 10,
+        "DEV-SPARE-022": 9
+      },
+      "reserved": {
+        "DEV-022": 0,
+        "DEV-SPARE-022": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-022": 7,
+        "DEV-SPARE-022": 9
+      },
+      "reserved": {
+        "DEV-022": 0,
+        "DEV-SPARE-022": 0
+      },
+      "shipments": {
+        "DEV-DOCK-2": {
+          "DEV-022": 2
+        },
+        "DEV-BACKUP-2": {
+          "DEV-022": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-023",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 3 units of DEV-023",
+    "initial": {
+      "available": {
+        "DEV-023": 13,
+        "DEV-SPARE-023": 9
+      },
+      "reserved": {
+        "DEV-023": 0,
+        "DEV-SPARE-023": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-023": 13,
+        "DEV-SPARE-023": 9
+      },
+      "reserved": {
+        "DEV-023": 0,
+        "DEV-SPARE-023": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-023": 10,
+          "DEV-SPARE-023": 9
+        },
+        "reserved": {
+          "DEV-023": 3,
+          "DEV-SPARE-023": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-024",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 4 units of DEV-024 to DEV-DOCK-4",
+    "initial": {
+      "available": {
+        "DEV-024": 16,
+        "DEV-SPARE-024": 9
+      },
+      "reserved": {
+        "DEV-024": 0,
+        "DEV-SPARE-024": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-024": 12,
+        "DEV-SPARE-024": 9
+      },
+      "reserved": {
+        "DEV-024": 0,
+        "DEV-SPARE-024": 0
+      },
+      "shipments": {
+        "DEV-DOCK-4": {
+          "DEV-024": 4
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-025",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 5 units of DEV-025 to DEV-DOCK-0; Ship 1 units of DEV-025 to DEV-BACKUP-1",
+    "initial": {
+      "available": {
+        "DEV-025": 19,
+        "DEV-SPARE-025": 9
+      },
+      "reserved": {
+        "DEV-025": 0,
+        "DEV-SPARE-025": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-025": 13,
+        "DEV-SPARE-025": 9
+      },
+      "reserved": {
+        "DEV-025": 0,
+        "DEV-SPARE-025": 0
+      },
+      "shipments": {
+        "DEV-DOCK-0": {
+          "DEV-025": 5
+        },
+        "DEV-BACKUP-1": {
+          "DEV-025": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-026",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 6 units of DEV-026",
+    "initial": {
+      "available": {
+        "DEV-026": 22,
+        "DEV-SPARE-026": 9
+      },
+      "reserved": {
+        "DEV-026": 0,
+        "DEV-SPARE-026": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-026": 22,
+        "DEV-SPARE-026": 9
+      },
+      "reserved": {
+        "DEV-026": 0,
+        "DEV-SPARE-026": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-026": 16,
+          "DEV-SPARE-026": 9
+        },
+        "reserved": {
+          "DEV-026": 6,
+          "DEV-SPARE-026": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-027",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 7 units of DEV-027 to DEV-DOCK-2",
+    "initial": {
+      "available": {
+        "DEV-027": 25,
+        "DEV-SPARE-027": 9
+      },
+      "reserved": {
+        "DEV-027": 0,
+        "DEV-SPARE-027": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-027": 18,
+        "DEV-SPARE-027": 9
+      },
+      "reserved": {
+        "DEV-027": 0,
+        "DEV-SPARE-027": 0
+      },
+      "shipments": {
+        "DEV-DOCK-2": {
+          "DEV-027": 7
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-028",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 1 units of DEV-028 to DEV-DOCK-3; Ship 1 units of DEV-028 to DEV-BACKUP-0",
+    "initial": {
+      "available": {
+        "DEV-028": 7,
+        "DEV-SPARE-028": 9
+      },
+      "reserved": {
+        "DEV-028": 0,
+        "DEV-SPARE-028": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-028": 5,
+        "DEV-SPARE-028": 9
+      },
+      "reserved": {
+        "DEV-028": 0,
+        "DEV-SPARE-028": 0
+      },
+      "shipments": {
+        "DEV-DOCK-3": {
+          "DEV-028": 1
+        },
+        "DEV-BACKUP-0": {
+          "DEV-028": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-029",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 2 units of DEV-029",
+    "initial": {
+      "available": {
+        "DEV-029": 10,
+        "DEV-SPARE-029": 9
+      },
+      "reserved": {
+        "DEV-029": 0,
+        "DEV-SPARE-029": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-029": 10,
+        "DEV-SPARE-029": 9
+      },
+      "reserved": {
+        "DEV-029": 0,
+        "DEV-SPARE-029": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-029": 8,
+          "DEV-SPARE-029": 9
+        },
+        "reserved": {
+          "DEV-029": 2,
+          "DEV-SPARE-029": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-030",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 3 units of DEV-030 to DEV-DOCK-0",
+    "initial": {
+      "available": {
+        "DEV-030": 13,
+        "DEV-SPARE-030": 9
+      },
+      "reserved": {
+        "DEV-030": 0,
+        "DEV-SPARE-030": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-030": 10,
+        "DEV-SPARE-030": 9
+      },
+      "reserved": {
+        "DEV-030": 0,
+        "DEV-SPARE-030": 0
+      },
+      "shipments": {
+        "DEV-DOCK-0": {
+          "DEV-030": 3
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-031",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 4 units of DEV-031 to DEV-DOCK-1; Ship 1 units of DEV-031 to DEV-BACKUP-3",
+    "initial": {
+      "available": {
+        "DEV-031": 16,
+        "DEV-SPARE-031": 9
+      },
+      "reserved": {
+        "DEV-031": 0,
+        "DEV-SPARE-031": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-031": 11,
+        "DEV-SPARE-031": 9
+      },
+      "reserved": {
+        "DEV-031": 0,
+        "DEV-SPARE-031": 0
+      },
+      "shipments": {
+        "DEV-DOCK-1": {
+          "DEV-031": 4
+        },
+        "DEV-BACKUP-3": {
+          "DEV-031": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-032",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 5 units of DEV-032",
+    "initial": {
+      "available": {
+        "DEV-032": 19,
+        "DEV-SPARE-032": 9
+      },
+      "reserved": {
+        "DEV-032": 0,
+        "DEV-SPARE-032": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-032": 19,
+        "DEV-SPARE-032": 9
+      },
+      "reserved": {
+        "DEV-032": 0,
+        "DEV-SPARE-032": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-032": 14,
+          "DEV-SPARE-032": 9
+        },
+        "reserved": {
+          "DEV-032": 5,
+          "DEV-SPARE-032": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-033",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 6 units of DEV-033 to DEV-DOCK-3",
+    "initial": {
+      "available": {
+        "DEV-033": 22,
+        "DEV-SPARE-033": 9
+      },
+      "reserved": {
+        "DEV-033": 0,
+        "DEV-SPARE-033": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-033": 16,
+        "DEV-SPARE-033": 9
+      },
+      "reserved": {
+        "DEV-033": 0,
+        "DEV-SPARE-033": 0
+      },
+      "shipments": {
+        "DEV-DOCK-3": {
+          "DEV-033": 6
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-034",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 7 units of DEV-034 to DEV-DOCK-4; Ship 1 units of DEV-034 to DEV-BACKUP-2",
+    "initial": {
+      "available": {
+        "DEV-034": 25,
+        "DEV-SPARE-034": 9
+      },
+      "reserved": {
+        "DEV-034": 0,
+        "DEV-SPARE-034": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-034": 17,
+        "DEV-SPARE-034": 9
+      },
+      "reserved": {
+        "DEV-034": 0,
+        "DEV-SPARE-034": 0
+      },
+      "shipments": {
+        "DEV-DOCK-4": {
+          "DEV-034": 7
+        },
+        "DEV-BACKUP-2": {
+          "DEV-034": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-035",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 1 units of DEV-035",
+    "initial": {
+      "available": {
+        "DEV-035": 7,
+        "DEV-SPARE-035": 9
+      },
+      "reserved": {
+        "DEV-035": 0,
+        "DEV-SPARE-035": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-035": 7,
+        "DEV-SPARE-035": 9
+      },
+      "reserved": {
+        "DEV-035": 0,
+        "DEV-SPARE-035": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-035": 6,
+          "DEV-SPARE-035": 9
+        },
+        "reserved": {
+          "DEV-035": 1,
+          "DEV-SPARE-035": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-036",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 2 units of DEV-036 to DEV-DOCK-1",
+    "initial": {
+      "available": {
+        "DEV-036": 10,
+        "DEV-SPARE-036": 9
+      },
+      "reserved": {
+        "DEV-036": 0,
+        "DEV-SPARE-036": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-036": 8,
+        "DEV-SPARE-036": 9
+      },
+      "reserved": {
+        "DEV-036": 0,
+        "DEV-SPARE-036": 0
+      },
+      "shipments": {
+        "DEV-DOCK-1": {
+          "DEV-036": 2
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-037",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 3 units of DEV-037 to DEV-DOCK-2; Ship 1 units of DEV-037 to DEV-BACKUP-1",
+    "initial": {
+      "available": {
+        "DEV-037": 13,
+        "DEV-SPARE-037": 9
+      },
+      "reserved": {
+        "DEV-037": 0,
+        "DEV-SPARE-037": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-037": 9,
+        "DEV-SPARE-037": 9
+      },
+      "reserved": {
+        "DEV-037": 0,
+        "DEV-SPARE-037": 0
+      },
+      "shipments": {
+        "DEV-DOCK-2": {
+          "DEV-037": 3
+        },
+        "DEV-BACKUP-1": {
+          "DEV-037": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-038",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 4 units of DEV-038",
+    "initial": {
+      "available": {
+        "DEV-038": 16,
+        "DEV-SPARE-038": 9
+      },
+      "reserved": {
+        "DEV-038": 0,
+        "DEV-SPARE-038": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-038": 16,
+        "DEV-SPARE-038": 9
+      },
+      "reserved": {
+        "DEV-038": 0,
+        "DEV-SPARE-038": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-038": 12,
+          "DEV-SPARE-038": 9
+        },
+        "reserved": {
+          "DEV-038": 4,
+          "DEV-SPARE-038": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-039",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 5 units of DEV-039 to DEV-DOCK-4",
+    "initial": {
+      "available": {
+        "DEV-039": 19,
+        "DEV-SPARE-039": 9
+      },
+      "reserved": {
+        "DEV-039": 0,
+        "DEV-SPARE-039": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-039": 14,
+        "DEV-SPARE-039": 9
+      },
+      "reserved": {
+        "DEV-039": 0,
+        "DEV-SPARE-039": 0
+      },
+      "shipments": {
+        "DEV-DOCK-4": {
+          "DEV-039": 5
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-040",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 6 units of DEV-040 to DEV-DOCK-0; Ship 1 units of DEV-040 to DEV-BACKUP-0",
+    "initial": {
+      "available": {
+        "DEV-040": 22,
+        "DEV-SPARE-040": 9
+      },
+      "reserved": {
+        "DEV-040": 0,
+        "DEV-SPARE-040": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-040": 15,
+        "DEV-SPARE-040": 9
+      },
+      "reserved": {
+        "DEV-040": 0,
+        "DEV-SPARE-040": 0
+      },
+      "shipments": {
+        "DEV-DOCK-0": {
+          "DEV-040": 6
+        },
+        "DEV-BACKUP-0": {
+          "DEV-040": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-041",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 7 units of DEV-041",
+    "initial": {
+      "available": {
+        "DEV-041": 25,
+        "DEV-SPARE-041": 9
+      },
+      "reserved": {
+        "DEV-041": 0,
+        "DEV-SPARE-041": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-041": 25,
+        "DEV-SPARE-041": 9
+      },
+      "reserved": {
+        "DEV-041": 0,
+        "DEV-SPARE-041": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-041": 18,
+          "DEV-SPARE-041": 9
+        },
+        "reserved": {
+          "DEV-041": 7,
+          "DEV-SPARE-041": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-042",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 1 units of DEV-042 to DEV-DOCK-2",
+    "initial": {
+      "available": {
+        "DEV-042": 7,
+        "DEV-SPARE-042": 9
+      },
+      "reserved": {
+        "DEV-042": 0,
+        "DEV-SPARE-042": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-042": 6,
+        "DEV-SPARE-042": 9
+      },
+      "reserved": {
+        "DEV-042": 0,
+        "DEV-SPARE-042": 0
+      },
+      "shipments": {
+        "DEV-DOCK-2": {
+          "DEV-042": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-043",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 2 units of DEV-043 to DEV-DOCK-3; Ship 1 units of DEV-043 to DEV-BACKUP-3",
+    "initial": {
+      "available": {
+        "DEV-043": 10,
+        "DEV-SPARE-043": 9
+      },
+      "reserved": {
+        "DEV-043": 0,
+        "DEV-SPARE-043": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-043": 7,
+        "DEV-SPARE-043": 9
+      },
+      "reserved": {
+        "DEV-043": 0,
+        "DEV-SPARE-043": 0
+      },
+      "shipments": {
+        "DEV-DOCK-3": {
+          "DEV-043": 2
+        },
+        "DEV-BACKUP-3": {
+          "DEV-043": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-044",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 3 units of DEV-044",
+    "initial": {
+      "available": {
+        "DEV-044": 13,
+        "DEV-SPARE-044": 9
+      },
+      "reserved": {
+        "DEV-044": 0,
+        "DEV-SPARE-044": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-044": 13,
+        "DEV-SPARE-044": 9
+      },
+      "reserved": {
+        "DEV-044": 0,
+        "DEV-SPARE-044": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-044": 10,
+          "DEV-SPARE-044": 9
+        },
+        "reserved": {
+          "DEV-044": 3,
+          "DEV-SPARE-044": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-045",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 4 units of DEV-045 to DEV-DOCK-0",
+    "initial": {
+      "available": {
+        "DEV-045": 16,
+        "DEV-SPARE-045": 9
+      },
+      "reserved": {
+        "DEV-045": 0,
+        "DEV-SPARE-045": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-045": 12,
+        "DEV-SPARE-045": 9
+      },
+      "reserved": {
+        "DEV-045": 0,
+        "DEV-SPARE-045": 0
+      },
+      "shipments": {
+        "DEV-DOCK-0": {
+          "DEV-045": 4
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-046",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 5 units of DEV-046 to DEV-DOCK-1; Ship 1 units of DEV-046 to DEV-BACKUP-2",
+    "initial": {
+      "available": {
+        "DEV-046": 19,
+        "DEV-SPARE-046": 9
+      },
+      "reserved": {
+        "DEV-046": 0,
+        "DEV-SPARE-046": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-046": 13,
+        "DEV-SPARE-046": 9
+      },
+      "reserved": {
+        "DEV-046": 0,
+        "DEV-SPARE-046": 0
+      },
+      "shipments": {
+        "DEV-DOCK-1": {
+          "DEV-046": 5
+        },
+        "DEV-BACKUP-2": {
+          "DEV-046": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-047",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 6 units of DEV-047",
+    "initial": {
+      "available": {
+        "DEV-047": 22,
+        "DEV-SPARE-047": 9
+      },
+      "reserved": {
+        "DEV-047": 0,
+        "DEV-SPARE-047": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-047": 22,
+        "DEV-SPARE-047": 9
+      },
+      "reserved": {
+        "DEV-047": 0,
+        "DEV-SPARE-047": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-047": 16,
+          "DEV-SPARE-047": 9
+        },
+        "reserved": {
+          "DEV-047": 6,
+          "DEV-SPARE-047": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-048",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 7 units of DEV-048 to DEV-DOCK-3",
+    "initial": {
+      "available": {
+        "DEV-048": 25,
+        "DEV-SPARE-048": 9
+      },
+      "reserved": {
+        "DEV-048": 0,
+        "DEV-SPARE-048": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-048": 18,
+        "DEV-SPARE-048": 9
+      },
+      "reserved": {
+        "DEV-048": 0,
+        "DEV-SPARE-048": 0
+      },
+      "shipments": {
+        "DEV-DOCK-3": {
+          "DEV-048": 7
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-049",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 1 units of DEV-049 to DEV-DOCK-4; Ship 1 units of DEV-049 to DEV-BACKUP-1",
+    "initial": {
+      "available": {
+        "DEV-049": 7,
+        "DEV-SPARE-049": 9
+      },
+      "reserved": {
+        "DEV-049": 0,
+        "DEV-SPARE-049": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-049": 5,
+        "DEV-SPARE-049": 9
+      },
+      "reserved": {
+        "DEV-049": 0,
+        "DEV-SPARE-049": 0
+      },
+      "shipments": {
+        "DEV-DOCK-4": {
+          "DEV-049": 1
+        },
+        "DEV-BACKUP-1": {
+          "DEV-049": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-050",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 2 units of DEV-050",
+    "initial": {
+      "available": {
+        "DEV-050": 10,
+        "DEV-SPARE-050": 9
+      },
+      "reserved": {
+        "DEV-050": 0,
+        "DEV-SPARE-050": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-050": 10,
+        "DEV-SPARE-050": 9
+      },
+      "reserved": {
+        "DEV-050": 0,
+        "DEV-SPARE-050": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-050": 8,
+          "DEV-SPARE-050": 9
+        },
+        "reserved": {
+          "DEV-050": 2,
+          "DEV-SPARE-050": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-051",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 3 units of DEV-051 to DEV-DOCK-1",
+    "initial": {
+      "available": {
+        "DEV-051": 13,
+        "DEV-SPARE-051": 9
+      },
+      "reserved": {
+        "DEV-051": 0,
+        "DEV-SPARE-051": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-051": 10,
+        "DEV-SPARE-051": 9
+      },
+      "reserved": {
+        "DEV-051": 0,
+        "DEV-SPARE-051": 0
+      },
+      "shipments": {
+        "DEV-DOCK-1": {
+          "DEV-051": 3
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-052",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 4 units of DEV-052 to DEV-DOCK-2; Ship 1 units of DEV-052 to DEV-BACKUP-0",
+    "initial": {
+      "available": {
+        "DEV-052": 16,
+        "DEV-SPARE-052": 9
+      },
+      "reserved": {
+        "DEV-052": 0,
+        "DEV-SPARE-052": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-052": 11,
+        "DEV-SPARE-052": 9
+      },
+      "reserved": {
+        "DEV-052": 0,
+        "DEV-SPARE-052": 0
+      },
+      "shipments": {
+        "DEV-DOCK-2": {
+          "DEV-052": 4
+        },
+        "DEV-BACKUP-0": {
+          "DEV-052": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-053",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 5 units of DEV-053",
+    "initial": {
+      "available": {
+        "DEV-053": 19,
+        "DEV-SPARE-053": 9
+      },
+      "reserved": {
+        "DEV-053": 0,
+        "DEV-SPARE-053": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-053": 19,
+        "DEV-SPARE-053": 9
+      },
+      "reserved": {
+        "DEV-053": 0,
+        "DEV-SPARE-053": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-053": 14,
+          "DEV-SPARE-053": 9
+        },
+        "reserved": {
+          "DEV-053": 5,
+          "DEV-SPARE-053": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-054",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 6 units of DEV-054 to DEV-DOCK-4",
+    "initial": {
+      "available": {
+        "DEV-054": 22,
+        "DEV-SPARE-054": 9
+      },
+      "reserved": {
+        "DEV-054": 0,
+        "DEV-SPARE-054": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-054": 16,
+        "DEV-SPARE-054": 9
+      },
+      "reserved": {
+        "DEV-054": 0,
+        "DEV-SPARE-054": 0
+      },
+      "shipments": {
+        "DEV-DOCK-4": {
+          "DEV-054": 6
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-055",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 7 units of DEV-055 to DEV-DOCK-0; Ship 1 units of DEV-055 to DEV-BACKUP-3",
+    "initial": {
+      "available": {
+        "DEV-055": 25,
+        "DEV-SPARE-055": 9
+      },
+      "reserved": {
+        "DEV-055": 0,
+        "DEV-SPARE-055": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-055": 17,
+        "DEV-SPARE-055": 9
+      },
+      "reserved": {
+        "DEV-055": 0,
+        "DEV-SPARE-055": 0
+      },
+      "shipments": {
+        "DEV-DOCK-0": {
+          "DEV-055": 7
+        },
+        "DEV-BACKUP-3": {
+          "DEV-055": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-056",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 1 units of DEV-056",
+    "initial": {
+      "available": {
+        "DEV-056": 7,
+        "DEV-SPARE-056": 9
+      },
+      "reserved": {
+        "DEV-056": 0,
+        "DEV-SPARE-056": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-056": 7,
+        "DEV-SPARE-056": 9
+      },
+      "reserved": {
+        "DEV-056": 0,
+        "DEV-SPARE-056": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-056": 6,
+          "DEV-SPARE-056": 9
+        },
+        "reserved": {
+          "DEV-056": 1,
+          "DEV-SPARE-056": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-057",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 2 units of DEV-057 to DEV-DOCK-2",
+    "initial": {
+      "available": {
+        "DEV-057": 10,
+        "DEV-SPARE-057": 9
+      },
+      "reserved": {
+        "DEV-057": 0,
+        "DEV-SPARE-057": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-057": 8,
+        "DEV-SPARE-057": 9
+      },
+      "reserved": {
+        "DEV-057": 0,
+        "DEV-SPARE-057": 0
+      },
+      "shipments": {
+        "DEV-DOCK-2": {
+          "DEV-057": 2
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-058",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 3 units of DEV-058 to DEV-DOCK-3; Ship 1 units of DEV-058 to DEV-BACKUP-2",
+    "initial": {
+      "available": {
+        "DEV-058": 13,
+        "DEV-SPARE-058": 9
+      },
+      "reserved": {
+        "DEV-058": 0,
+        "DEV-SPARE-058": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-058": 9,
+        "DEV-SPARE-058": 9
+      },
+      "reserved": {
+        "DEV-058": 0,
+        "DEV-SPARE-058": 0
+      },
+      "shipments": {
+        "DEV-DOCK-3": {
+          "DEV-058": 3
+        },
+        "DEV-BACKUP-2": {
+          "DEV-058": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-059",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 4 units of DEV-059",
+    "initial": {
+      "available": {
+        "DEV-059": 16,
+        "DEV-SPARE-059": 9
+      },
+      "reserved": {
+        "DEV-059": 0,
+        "DEV-SPARE-059": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-059": 16,
+        "DEV-SPARE-059": 9
+      },
+      "reserved": {
+        "DEV-059": 0,
+        "DEV-SPARE-059": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-059": 12,
+          "DEV-SPARE-059": 9
+        },
+        "reserved": {
+          "DEV-059": 4,
+          "DEV-SPARE-059": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-060",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 5 units of DEV-060 to DEV-DOCK-0",
+    "initial": {
+      "available": {
+        "DEV-060": 19,
+        "DEV-SPARE-060": 9
+      },
+      "reserved": {
+        "DEV-060": 0,
+        "DEV-SPARE-060": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-060": 14,
+        "DEV-SPARE-060": 9
+      },
+      "reserved": {
+        "DEV-060": 0,
+        "DEV-SPARE-060": 0
+      },
+      "shipments": {
+        "DEV-DOCK-0": {
+          "DEV-060": 5
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-061",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 6 units of DEV-061 to DEV-DOCK-1; Ship 1 units of DEV-061 to DEV-BACKUP-1",
+    "initial": {
+      "available": {
+        "DEV-061": 22,
+        "DEV-SPARE-061": 9
+      },
+      "reserved": {
+        "DEV-061": 0,
+        "DEV-SPARE-061": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-061": 15,
+        "DEV-SPARE-061": 9
+      },
+      "reserved": {
+        "DEV-061": 0,
+        "DEV-SPARE-061": 0
+      },
+      "shipments": {
+        "DEV-DOCK-1": {
+          "DEV-061": 6
+        },
+        "DEV-BACKUP-1": {
+          "DEV-061": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-062",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 7 units of DEV-062",
+    "initial": {
+      "available": {
+        "DEV-062": 25,
+        "DEV-SPARE-062": 9
+      },
+      "reserved": {
+        "DEV-062": 0,
+        "DEV-SPARE-062": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-062": 25,
+        "DEV-SPARE-062": 9
+      },
+      "reserved": {
+        "DEV-062": 0,
+        "DEV-SPARE-062": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-062": 18,
+          "DEV-SPARE-062": 9
+        },
+        "reserved": {
+          "DEV-062": 7,
+          "DEV-SPARE-062": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-063",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 1 units of DEV-063 to DEV-DOCK-3",
+    "initial": {
+      "available": {
+        "DEV-063": 7,
+        "DEV-SPARE-063": 9
+      },
+      "reserved": {
+        "DEV-063": 0,
+        "DEV-SPARE-063": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-063": 6,
+        "DEV-SPARE-063": 9
+      },
+      "reserved": {
+        "DEV-063": 0,
+        "DEV-SPARE-063": 0
+      },
+      "shipments": {
+        "DEV-DOCK-3": {
+          "DEV-063": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-064",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 2 units of DEV-064 to DEV-DOCK-4; Ship 1 units of DEV-064 to DEV-BACKUP-0",
+    "initial": {
+      "available": {
+        "DEV-064": 10,
+        "DEV-SPARE-064": 9
+      },
+      "reserved": {
+        "DEV-064": 0,
+        "DEV-SPARE-064": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-064": 7,
+        "DEV-SPARE-064": 9
+      },
+      "reserved": {
+        "DEV-064": 0,
+        "DEV-SPARE-064": 0
+      },
+      "shipments": {
+        "DEV-DOCK-4": {
+          "DEV-064": 2
+        },
+        "DEV-BACKUP-0": {
+          "DEV-064": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-065",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 3 units of DEV-065",
+    "initial": {
+      "available": {
+        "DEV-065": 13,
+        "DEV-SPARE-065": 9
+      },
+      "reserved": {
+        "DEV-065": 0,
+        "DEV-SPARE-065": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-065": 13,
+        "DEV-SPARE-065": 9
+      },
+      "reserved": {
+        "DEV-065": 0,
+        "DEV-SPARE-065": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-065": 10,
+          "DEV-SPARE-065": 9
+        },
+        "reserved": {
+          "DEV-065": 3,
+          "DEV-SPARE-065": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-066",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 4 units of DEV-066 to DEV-DOCK-1",
+    "initial": {
+      "available": {
+        "DEV-066": 16,
+        "DEV-SPARE-066": 9
+      },
+      "reserved": {
+        "DEV-066": 0,
+        "DEV-SPARE-066": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-066": 12,
+        "DEV-SPARE-066": 9
+      },
+      "reserved": {
+        "DEV-066": 0,
+        "DEV-SPARE-066": 0
+      },
+      "shipments": {
+        "DEV-DOCK-1": {
+          "DEV-066": 4
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-067",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 5 units of DEV-067 to DEV-DOCK-2; Ship 1 units of DEV-067 to DEV-BACKUP-3",
+    "initial": {
+      "available": {
+        "DEV-067": 19,
+        "DEV-SPARE-067": 9
+      },
+      "reserved": {
+        "DEV-067": 0,
+        "DEV-SPARE-067": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-067": 13,
+        "DEV-SPARE-067": 9
+      },
+      "reserved": {
+        "DEV-067": 0,
+        "DEV-SPARE-067": 0
+      },
+      "shipments": {
+        "DEV-DOCK-2": {
+          "DEV-067": 5
+        },
+        "DEV-BACKUP-3": {
+          "DEV-067": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-068",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 6 units of DEV-068",
+    "initial": {
+      "available": {
+        "DEV-068": 22,
+        "DEV-SPARE-068": 9
+      },
+      "reserved": {
+        "DEV-068": 0,
+        "DEV-SPARE-068": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-068": 22,
+        "DEV-SPARE-068": 9
+      },
+      "reserved": {
+        "DEV-068": 0,
+        "DEV-SPARE-068": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-068": 16,
+          "DEV-SPARE-068": 9
+        },
+        "reserved": {
+          "DEV-068": 6,
+          "DEV-SPARE-068": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-069",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 7 units of DEV-069 to DEV-DOCK-4",
+    "initial": {
+      "available": {
+        "DEV-069": 25,
+        "DEV-SPARE-069": 9
+      },
+      "reserved": {
+        "DEV-069": 0,
+        "DEV-SPARE-069": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-069": 18,
+        "DEV-SPARE-069": 9
+      },
+      "reserved": {
+        "DEV-069": 0,
+        "DEV-SPARE-069": 0
+      },
+      "shipments": {
+        "DEV-DOCK-4": {
+          "DEV-069": 7
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-070",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 1 units of DEV-070 to DEV-DOCK-0; Ship 1 units of DEV-070 to DEV-BACKUP-2",
+    "initial": {
+      "available": {
+        "DEV-070": 7,
+        "DEV-SPARE-070": 9
+      },
+      "reserved": {
+        "DEV-070": 0,
+        "DEV-SPARE-070": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-070": 5,
+        "DEV-SPARE-070": 9
+      },
+      "reserved": {
+        "DEV-070": 0,
+        "DEV-SPARE-070": 0
+      },
+      "shipments": {
+        "DEV-DOCK-0": {
+          "DEV-070": 1
+        },
+        "DEV-BACKUP-2": {
+          "DEV-070": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-071",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 2 units of DEV-071",
+    "initial": {
+      "available": {
+        "DEV-071": 10,
+        "DEV-SPARE-071": 9
+      },
+      "reserved": {
+        "DEV-071": 0,
+        "DEV-SPARE-071": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-071": 10,
+        "DEV-SPARE-071": 9
+      },
+      "reserved": {
+        "DEV-071": 0,
+        "DEV-SPARE-071": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-071": 8,
+          "DEV-SPARE-071": 9
+        },
+        "reserved": {
+          "DEV-071": 2,
+          "DEV-SPARE-071": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-072",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 3 units of DEV-072 to DEV-DOCK-2",
+    "initial": {
+      "available": {
+        "DEV-072": 13,
+        "DEV-SPARE-072": 9
+      },
+      "reserved": {
+        "DEV-072": 0,
+        "DEV-SPARE-072": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-072": 10,
+        "DEV-SPARE-072": 9
+      },
+      "reserved": {
+        "DEV-072": 0,
+        "DEV-SPARE-072": 0
+      },
+      "shipments": {
+        "DEV-DOCK-2": {
+          "DEV-072": 3
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-073",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 4 units of DEV-073 to DEV-DOCK-3; Ship 1 units of DEV-073 to DEV-BACKUP-1",
+    "initial": {
+      "available": {
+        "DEV-073": 16,
+        "DEV-SPARE-073": 9
+      },
+      "reserved": {
+        "DEV-073": 0,
+        "DEV-SPARE-073": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-073": 11,
+        "DEV-SPARE-073": 9
+      },
+      "reserved": {
+        "DEV-073": 0,
+        "DEV-SPARE-073": 0
+      },
+      "shipments": {
+        "DEV-DOCK-3": {
+          "DEV-073": 4
+        },
+        "DEV-BACKUP-1": {
+          "DEV-073": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-074",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 5 units of DEV-074",
+    "initial": {
+      "available": {
+        "DEV-074": 19,
+        "DEV-SPARE-074": 9
+      },
+      "reserved": {
+        "DEV-074": 0,
+        "DEV-SPARE-074": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-074": 19,
+        "DEV-SPARE-074": 9
+      },
+      "reserved": {
+        "DEV-074": 0,
+        "DEV-SPARE-074": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-074": 14,
+          "DEV-SPARE-074": 9
+        },
+        "reserved": {
+          "DEV-074": 5,
+          "DEV-SPARE-074": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-075",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 6 units of DEV-075 to DEV-DOCK-0",
+    "initial": {
+      "available": {
+        "DEV-075": 22,
+        "DEV-SPARE-075": 9
+      },
+      "reserved": {
+        "DEV-075": 0,
+        "DEV-SPARE-075": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-075": 16,
+        "DEV-SPARE-075": 9
+      },
+      "reserved": {
+        "DEV-075": 0,
+        "DEV-SPARE-075": 0
+      },
+      "shipments": {
+        "DEV-DOCK-0": {
+          "DEV-075": 6
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-076",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 7 units of DEV-076 to DEV-DOCK-1; Ship 1 units of DEV-076 to DEV-BACKUP-0",
+    "initial": {
+      "available": {
+        "DEV-076": 25,
+        "DEV-SPARE-076": 9
+      },
+      "reserved": {
+        "DEV-076": 0,
+        "DEV-SPARE-076": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-076": 17,
+        "DEV-SPARE-076": 9
+      },
+      "reserved": {
+        "DEV-076": 0,
+        "DEV-SPARE-076": 0
+      },
+      "shipments": {
+        "DEV-DOCK-1": {
+          "DEV-076": 7
+        },
+        "DEV-BACKUP-0": {
+          "DEV-076": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-077",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 1 units of DEV-077",
+    "initial": {
+      "available": {
+        "DEV-077": 7,
+        "DEV-SPARE-077": 9
+      },
+      "reserved": {
+        "DEV-077": 0,
+        "DEV-SPARE-077": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-077": 7,
+        "DEV-SPARE-077": 9
+      },
+      "reserved": {
+        "DEV-077": 0,
+        "DEV-SPARE-077": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-077": 6,
+          "DEV-SPARE-077": 9
+        },
+        "reserved": {
+          "DEV-077": 1,
+          "DEV-SPARE-077": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-078",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 2 units of DEV-078 to DEV-DOCK-3",
+    "initial": {
+      "available": {
+        "DEV-078": 10,
+        "DEV-SPARE-078": 9
+      },
+      "reserved": {
+        "DEV-078": 0,
+        "DEV-SPARE-078": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-078": 8,
+        "DEV-SPARE-078": 9
+      },
+      "reserved": {
+        "DEV-078": 0,
+        "DEV-SPARE-078": 0
+      },
+      "shipments": {
+        "DEV-DOCK-3": {
+          "DEV-078": 2
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-079",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 3 units of DEV-079 to DEV-DOCK-4; Ship 1 units of DEV-079 to DEV-BACKUP-3",
+    "initial": {
+      "available": {
+        "DEV-079": 13,
+        "DEV-SPARE-079": 9
+      },
+      "reserved": {
+        "DEV-079": 0,
+        "DEV-SPARE-079": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-079": 9,
+        "DEV-SPARE-079": 9
+      },
+      "reserved": {
+        "DEV-079": 0,
+        "DEV-SPARE-079": 0
+      },
+      "shipments": {
+        "DEV-DOCK-4": {
+          "DEV-079": 3
+        },
+        "DEV-BACKUP-3": {
+          "DEV-079": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-080",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 4 units of DEV-080",
+    "initial": {
+      "available": {
+        "DEV-080": 16,
+        "DEV-SPARE-080": 9
+      },
+      "reserved": {
+        "DEV-080": 0,
+        "DEV-SPARE-080": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-080": 16,
+        "DEV-SPARE-080": 9
+      },
+      "reserved": {
+        "DEV-080": 0,
+        "DEV-SPARE-080": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-080": 12,
+          "DEV-SPARE-080": 9
+        },
+        "reserved": {
+          "DEV-080": 4,
+          "DEV-SPARE-080": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-081",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 5 units of DEV-081 to DEV-DOCK-1",
+    "initial": {
+      "available": {
+        "DEV-081": 19,
+        "DEV-SPARE-081": 9
+      },
+      "reserved": {
+        "DEV-081": 0,
+        "DEV-SPARE-081": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-081": 14,
+        "DEV-SPARE-081": 9
+      },
+      "reserved": {
+        "DEV-081": 0,
+        "DEV-SPARE-081": 0
+      },
+      "shipments": {
+        "DEV-DOCK-1": {
+          "DEV-081": 5
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-082",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 6 units of DEV-082 to DEV-DOCK-2; Ship 1 units of DEV-082 to DEV-BACKUP-2",
+    "initial": {
+      "available": {
+        "DEV-082": 22,
+        "DEV-SPARE-082": 9
+      },
+      "reserved": {
+        "DEV-082": 0,
+        "DEV-SPARE-082": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-082": 15,
+        "DEV-SPARE-082": 9
+      },
+      "reserved": {
+        "DEV-082": 0,
+        "DEV-SPARE-082": 0
+      },
+      "shipments": {
+        "DEV-DOCK-2": {
+          "DEV-082": 6
+        },
+        "DEV-BACKUP-2": {
+          "DEV-082": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-083",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 7 units of DEV-083",
+    "initial": {
+      "available": {
+        "DEV-083": 25,
+        "DEV-SPARE-083": 9
+      },
+      "reserved": {
+        "DEV-083": 0,
+        "DEV-SPARE-083": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-083": 25,
+        "DEV-SPARE-083": 9
+      },
+      "reserved": {
+        "DEV-083": 0,
+        "DEV-SPARE-083": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-083": 18,
+          "DEV-SPARE-083": 9
+        },
+        "reserved": {
+          "DEV-083": 7,
+          "DEV-SPARE-083": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-084",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 1 units of DEV-084 to DEV-DOCK-4",
+    "initial": {
+      "available": {
+        "DEV-084": 7,
+        "DEV-SPARE-084": 9
+      },
+      "reserved": {
+        "DEV-084": 0,
+        "DEV-SPARE-084": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-084": 6,
+        "DEV-SPARE-084": 9
+      },
+      "reserved": {
+        "DEV-084": 0,
+        "DEV-SPARE-084": 0
+      },
+      "shipments": {
+        "DEV-DOCK-4": {
+          "DEV-084": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-085",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 2 units of DEV-085 to DEV-DOCK-0; Ship 1 units of DEV-085 to DEV-BACKUP-1",
+    "initial": {
+      "available": {
+        "DEV-085": 10,
+        "DEV-SPARE-085": 9
+      },
+      "reserved": {
+        "DEV-085": 0,
+        "DEV-SPARE-085": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-085": 7,
+        "DEV-SPARE-085": 9
+      },
+      "reserved": {
+        "DEV-085": 0,
+        "DEV-SPARE-085": 0
+      },
+      "shipments": {
+        "DEV-DOCK-0": {
+          "DEV-085": 2
+        },
+        "DEV-BACKUP-1": {
+          "DEV-085": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-086",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 3 units of DEV-086",
+    "initial": {
+      "available": {
+        "DEV-086": 13,
+        "DEV-SPARE-086": 9
+      },
+      "reserved": {
+        "DEV-086": 0,
+        "DEV-SPARE-086": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-086": 13,
+        "DEV-SPARE-086": 9
+      },
+      "reserved": {
+        "DEV-086": 0,
+        "DEV-SPARE-086": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-086": 10,
+          "DEV-SPARE-086": 9
+        },
+        "reserved": {
+          "DEV-086": 3,
+          "DEV-SPARE-086": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-087",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 4 units of DEV-087 to DEV-DOCK-2",
+    "initial": {
+      "available": {
+        "DEV-087": 16,
+        "DEV-SPARE-087": 9
+      },
+      "reserved": {
+        "DEV-087": 0,
+        "DEV-SPARE-087": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-087": 12,
+        "DEV-SPARE-087": 9
+      },
+      "reserved": {
+        "DEV-087": 0,
+        "DEV-SPARE-087": 0
+      },
+      "shipments": {
+        "DEV-DOCK-2": {
+          "DEV-087": 4
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-088",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 5 units of DEV-088 to DEV-DOCK-3; Ship 1 units of DEV-088 to DEV-BACKUP-0",
+    "initial": {
+      "available": {
+        "DEV-088": 19,
+        "DEV-SPARE-088": 9
+      },
+      "reserved": {
+        "DEV-088": 0,
+        "DEV-SPARE-088": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-088": 13,
+        "DEV-SPARE-088": 9
+      },
+      "reserved": {
+        "DEV-088": 0,
+        "DEV-SPARE-088": 0
+      },
+      "shipments": {
+        "DEV-DOCK-3": {
+          "DEV-088": 5
+        },
+        "DEV-BACKUP-0": {
+          "DEV-088": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-089",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 6 units of DEV-089",
+    "initial": {
+      "available": {
+        "DEV-089": 22,
+        "DEV-SPARE-089": 9
+      },
+      "reserved": {
+        "DEV-089": 0,
+        "DEV-SPARE-089": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-089": 22,
+        "DEV-SPARE-089": 9
+      },
+      "reserved": {
+        "DEV-089": 0,
+        "DEV-SPARE-089": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-089": 16,
+          "DEV-SPARE-089": 9
+        },
+        "reserved": {
+          "DEV-089": 6,
+          "DEV-SPARE-089": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-090",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 7 units of DEV-090 to DEV-DOCK-0",
+    "initial": {
+      "available": {
+        "DEV-090": 25,
+        "DEV-SPARE-090": 9
+      },
+      "reserved": {
+        "DEV-090": 0,
+        "DEV-SPARE-090": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-090": 18,
+        "DEV-SPARE-090": 9
+      },
+      "reserved": {
+        "DEV-090": 0,
+        "DEV-SPARE-090": 0
+      },
+      "shipments": {
+        "DEV-DOCK-0": {
+          "DEV-090": 7
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-091",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 1 units of DEV-091 to DEV-DOCK-1; Ship 1 units of DEV-091 to DEV-BACKUP-3",
+    "initial": {
+      "available": {
+        "DEV-091": 7,
+        "DEV-SPARE-091": 9
+      },
+      "reserved": {
+        "DEV-091": 0,
+        "DEV-SPARE-091": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-091": 5,
+        "DEV-SPARE-091": 9
+      },
+      "reserved": {
+        "DEV-091": 0,
+        "DEV-SPARE-091": 0
+      },
+      "shipments": {
+        "DEV-DOCK-1": {
+          "DEV-091": 1
+        },
+        "DEV-BACKUP-3": {
+          "DEV-091": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-092",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 2 units of DEV-092",
+    "initial": {
+      "available": {
+        "DEV-092": 10,
+        "DEV-SPARE-092": 9
+      },
+      "reserved": {
+        "DEV-092": 0,
+        "DEV-SPARE-092": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-092": 10,
+        "DEV-SPARE-092": 9
+      },
+      "reserved": {
+        "DEV-092": 0,
+        "DEV-SPARE-092": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-092": 8,
+          "DEV-SPARE-092": 9
+        },
+        "reserved": {
+          "DEV-092": 2,
+          "DEV-SPARE-092": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-093",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 3 units of DEV-093 to DEV-DOCK-3",
+    "initial": {
+      "available": {
+        "DEV-093": 13,
+        "DEV-SPARE-093": 9
+      },
+      "reserved": {
+        "DEV-093": 0,
+        "DEV-SPARE-093": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-093": 10,
+        "DEV-SPARE-093": 9
+      },
+      "reserved": {
+        "DEV-093": 0,
+        "DEV-SPARE-093": 0
+      },
+      "shipments": {
+        "DEV-DOCK-3": {
+          "DEV-093": 3
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-094",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 4 units of DEV-094 to DEV-DOCK-4; Ship 1 units of DEV-094 to DEV-BACKUP-2",
+    "initial": {
+      "available": {
+        "DEV-094": 16,
+        "DEV-SPARE-094": 9
+      },
+      "reserved": {
+        "DEV-094": 0,
+        "DEV-SPARE-094": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-094": 11,
+        "DEV-SPARE-094": 9
+      },
+      "reserved": {
+        "DEV-094": 0,
+        "DEV-SPARE-094": 0
+      },
+      "shipments": {
+        "DEV-DOCK-4": {
+          "DEV-094": 4
+        },
+        "DEV-BACKUP-2": {
+          "DEV-094": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-095",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 5 units of DEV-095",
+    "initial": {
+      "available": {
+        "DEV-095": 19,
+        "DEV-SPARE-095": 9
+      },
+      "reserved": {
+        "DEV-095": 0,
+        "DEV-SPARE-095": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-095": 19,
+        "DEV-SPARE-095": 9
+      },
+      "reserved": {
+        "DEV-095": 0,
+        "DEV-SPARE-095": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-095": 14,
+          "DEV-SPARE-095": 9
+        },
+        "reserved": {
+          "DEV-095": 5,
+          "DEV-SPARE-095": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-096",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 6 units of DEV-096 to DEV-DOCK-1",
+    "initial": {
+      "available": {
+        "DEV-096": 22,
+        "DEV-SPARE-096": 9
+      },
+      "reserved": {
+        "DEV-096": 0,
+        "DEV-SPARE-096": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-096": 16,
+        "DEV-SPARE-096": 9
+      },
+      "reserved": {
+        "DEV-096": 0,
+        "DEV-SPARE-096": 0
+      },
+      "shipments": {
+        "DEV-DOCK-1": {
+          "DEV-096": 6
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-097",
+    "split": "development",
+    "schema": "development",
+    "family": "split_ship",
+    "request": "Ship 7 units of DEV-097 to DEV-DOCK-2; Ship 1 units of DEV-097 to DEV-BACKUP-1",
+    "initial": {
+      "available": {
+        "DEV-097": 25,
+        "DEV-SPARE-097": 9
+      },
+      "reserved": {
+        "DEV-097": 0,
+        "DEV-SPARE-097": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-097": 17,
+        "DEV-SPARE-097": 9
+      },
+      "reserved": {
+        "DEV-097": 0,
+        "DEV-SPARE-097": 0
+      },
+      "shipments": {
+        "DEV-DOCK-2": {
+          "DEV-097": 7
+        },
+        "DEV-BACKUP-1": {
+          "DEV-097": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "development-098",
+    "split": "development",
+    "schema": "development",
+    "family": "hold_release",
+    "request": "Hold then release 1 units of DEV-098",
+    "initial": {
+      "available": {
+        "DEV-098": 7,
+        "DEV-SPARE-098": 9
+      },
+      "reserved": {
+        "DEV-098": 0,
+        "DEV-SPARE-098": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-098": 7,
+        "DEV-SPARE-098": 9
+      },
+      "reserved": {
+        "DEV-098": 0,
+        "DEV-SPARE-098": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "DEV-098": 6,
+          "DEV-SPARE-098": 9
+        },
+        "reserved": {
+          "DEV-098": 1,
+          "DEV-SPARE-098": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "development-099",
+    "split": "development",
+    "schema": "development",
+    "family": "single_ship",
+    "request": "Ship 2 units of DEV-099 to DEV-DOCK-4",
+    "initial": {
+      "available": {
+        "DEV-099": 10,
+        "DEV-SPARE-099": 9
+      },
+      "reserved": {
+        "DEV-099": 0,
+        "DEV-SPARE-099": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "DEV-099": 8,
+        "DEV-SPARE-099": 9
+      },
+      "reserved": {
+        "DEV-099": 0,
+        "DEV-SPARE-099": 0
+      },
+      "shipments": {
+        "DEV-DOCK-4": {
+          "DEV-099": 2
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-000",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "single_ship",
+    "request": "Ship 1 units of EVAL-000 to EVAL-DOCK-0",
+    "initial": {
+      "available": {
+        "EVAL-000": 7,
+        "EVAL-SPARE-000": 9
+      },
+      "reserved": {
+        "EVAL-000": 0,
+        "EVAL-SPARE-000": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-000": 6,
+        "EVAL-SPARE-000": 9
+      },
+      "reserved": {
+        "EVAL-000": 0,
+        "EVAL-SPARE-000": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-0": {
+          "EVAL-000": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-001",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "split_ship",
+    "request": "Ship 2 units of EVAL-001 to EVAL-DOCK-1; Ship 1 units of EVAL-001 to EVAL-BACKUP-1",
+    "initial": {
+      "available": {
+        "EVAL-001": 10,
+        "EVAL-SPARE-001": 9
+      },
+      "reserved": {
+        "EVAL-001": 0,
+        "EVAL-SPARE-001": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-001": 7,
+        "EVAL-SPARE-001": 9
+      },
+      "reserved": {
+        "EVAL-001": 0,
+        "EVAL-SPARE-001": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-1": {
+          "EVAL-001": 2
+        },
+        "EVAL-BACKUP-1": {
+          "EVAL-001": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-002",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "hold_release",
+    "request": "Hold then release 3 units of EVAL-002",
+    "initial": {
+      "available": {
+        "EVAL-002": 13,
+        "EVAL-SPARE-002": 9
+      },
+      "reserved": {
+        "EVAL-002": 0,
+        "EVAL-SPARE-002": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-002": 13,
+        "EVAL-SPARE-002": 9
+      },
+      "reserved": {
+        "EVAL-002": 0,
+        "EVAL-SPARE-002": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "EVAL-002": 10,
+          "EVAL-SPARE-002": 9
+        },
+        "reserved": {
+          "EVAL-002": 3,
+          "EVAL-SPARE-002": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "heldout-003",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "single_ship",
+    "request": "Ship 4 units of EVAL-003 to EVAL-DOCK-3",
+    "initial": {
+      "available": {
+        "EVAL-003": 16,
+        "EVAL-SPARE-003": 9
+      },
+      "reserved": {
+        "EVAL-003": 0,
+        "EVAL-SPARE-003": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-003": 12,
+        "EVAL-SPARE-003": 9
+      },
+      "reserved": {
+        "EVAL-003": 0,
+        "EVAL-SPARE-003": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-3": {
+          "EVAL-003": 4
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-004",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "split_ship",
+    "request": "Ship 5 units of EVAL-004 to EVAL-DOCK-4; Ship 1 units of EVAL-004 to EVAL-BACKUP-0",
+    "initial": {
+      "available": {
+        "EVAL-004": 19,
+        "EVAL-SPARE-004": 9
+      },
+      "reserved": {
+        "EVAL-004": 0,
+        "EVAL-SPARE-004": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-004": 13,
+        "EVAL-SPARE-004": 9
+      },
+      "reserved": {
+        "EVAL-004": 0,
+        "EVAL-SPARE-004": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-4": {
+          "EVAL-004": 5
+        },
+        "EVAL-BACKUP-0": {
+          "EVAL-004": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-005",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "hold_release",
+    "request": "Hold then release 6 units of EVAL-005",
+    "initial": {
+      "available": {
+        "EVAL-005": 22,
+        "EVAL-SPARE-005": 9
+      },
+      "reserved": {
+        "EVAL-005": 0,
+        "EVAL-SPARE-005": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-005": 22,
+        "EVAL-SPARE-005": 9
+      },
+      "reserved": {
+        "EVAL-005": 0,
+        "EVAL-SPARE-005": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "EVAL-005": 16,
+          "EVAL-SPARE-005": 9
+        },
+        "reserved": {
+          "EVAL-005": 6,
+          "EVAL-SPARE-005": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "heldout-006",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "single_ship",
+    "request": "Ship 7 units of EVAL-006 to EVAL-DOCK-1",
+    "initial": {
+      "available": {
+        "EVAL-006": 25,
+        "EVAL-SPARE-006": 9
+      },
+      "reserved": {
+        "EVAL-006": 0,
+        "EVAL-SPARE-006": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-006": 18,
+        "EVAL-SPARE-006": 9
+      },
+      "reserved": {
+        "EVAL-006": 0,
+        "EVAL-SPARE-006": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-1": {
+          "EVAL-006": 7
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-007",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "split_ship",
+    "request": "Ship 1 units of EVAL-007 to EVAL-DOCK-2; Ship 1 units of EVAL-007 to EVAL-BACKUP-3",
+    "initial": {
+      "available": {
+        "EVAL-007": 7,
+        "EVAL-SPARE-007": 9
+      },
+      "reserved": {
+        "EVAL-007": 0,
+        "EVAL-SPARE-007": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-007": 5,
+        "EVAL-SPARE-007": 9
+      },
+      "reserved": {
+        "EVAL-007": 0,
+        "EVAL-SPARE-007": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-2": {
+          "EVAL-007": 1
+        },
+        "EVAL-BACKUP-3": {
+          "EVAL-007": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-008",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "hold_release",
+    "request": "Hold then release 2 units of EVAL-008",
+    "initial": {
+      "available": {
+        "EVAL-008": 10,
+        "EVAL-SPARE-008": 9
+      },
+      "reserved": {
+        "EVAL-008": 0,
+        "EVAL-SPARE-008": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-008": 10,
+        "EVAL-SPARE-008": 9
+      },
+      "reserved": {
+        "EVAL-008": 0,
+        "EVAL-SPARE-008": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "EVAL-008": 8,
+          "EVAL-SPARE-008": 9
+        },
+        "reserved": {
+          "EVAL-008": 2,
+          "EVAL-SPARE-008": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "heldout-009",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "single_ship",
+    "request": "Ship 3 units of EVAL-009 to EVAL-DOCK-4",
+    "initial": {
+      "available": {
+        "EVAL-009": 13,
+        "EVAL-SPARE-009": 9
+      },
+      "reserved": {
+        "EVAL-009": 0,
+        "EVAL-SPARE-009": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-009": 10,
+        "EVAL-SPARE-009": 9
+      },
+      "reserved": {
+        "EVAL-009": 0,
+        "EVAL-SPARE-009": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-4": {
+          "EVAL-009": 3
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-010",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "split_ship",
+    "request": "Ship 4 units of EVAL-010 to EVAL-DOCK-0; Ship 1 units of EVAL-010 to EVAL-BACKUP-2",
+    "initial": {
+      "available": {
+        "EVAL-010": 16,
+        "EVAL-SPARE-010": 9
+      },
+      "reserved": {
+        "EVAL-010": 0,
+        "EVAL-SPARE-010": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-010": 11,
+        "EVAL-SPARE-010": 9
+      },
+      "reserved": {
+        "EVAL-010": 0,
+        "EVAL-SPARE-010": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-0": {
+          "EVAL-010": 4
+        },
+        "EVAL-BACKUP-2": {
+          "EVAL-010": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-011",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "hold_release",
+    "request": "Hold then release 5 units of EVAL-011",
+    "initial": {
+      "available": {
+        "EVAL-011": 19,
+        "EVAL-SPARE-011": 9
+      },
+      "reserved": {
+        "EVAL-011": 0,
+        "EVAL-SPARE-011": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-011": 19,
+        "EVAL-SPARE-011": 9
+      },
+      "reserved": {
+        "EVAL-011": 0,
+        "EVAL-SPARE-011": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "EVAL-011": 14,
+          "EVAL-SPARE-011": 9
+        },
+        "reserved": {
+          "EVAL-011": 5,
+          "EVAL-SPARE-011": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "heldout-012",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "single_ship",
+    "request": "Ship 6 units of EVAL-012 to EVAL-DOCK-2",
+    "initial": {
+      "available": {
+        "EVAL-012": 22,
+        "EVAL-SPARE-012": 9
+      },
+      "reserved": {
+        "EVAL-012": 0,
+        "EVAL-SPARE-012": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-012": 16,
+        "EVAL-SPARE-012": 9
+      },
+      "reserved": {
+        "EVAL-012": 0,
+        "EVAL-SPARE-012": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-2": {
+          "EVAL-012": 6
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-013",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "split_ship",
+    "request": "Ship 7 units of EVAL-013 to EVAL-DOCK-3; Ship 1 units of EVAL-013 to EVAL-BACKUP-1",
+    "initial": {
+      "available": {
+        "EVAL-013": 25,
+        "EVAL-SPARE-013": 9
+      },
+      "reserved": {
+        "EVAL-013": 0,
+        "EVAL-SPARE-013": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-013": 17,
+        "EVAL-SPARE-013": 9
+      },
+      "reserved": {
+        "EVAL-013": 0,
+        "EVAL-SPARE-013": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-3": {
+          "EVAL-013": 7
+        },
+        "EVAL-BACKUP-1": {
+          "EVAL-013": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-014",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "hold_release",
+    "request": "Hold then release 1 units of EVAL-014",
+    "initial": {
+      "available": {
+        "EVAL-014": 7,
+        "EVAL-SPARE-014": 9
+      },
+      "reserved": {
+        "EVAL-014": 0,
+        "EVAL-SPARE-014": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-014": 7,
+        "EVAL-SPARE-014": 9
+      },
+      "reserved": {
+        "EVAL-014": 0,
+        "EVAL-SPARE-014": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "EVAL-014": 6,
+          "EVAL-SPARE-014": 9
+        },
+        "reserved": {
+          "EVAL-014": 1,
+          "EVAL-SPARE-014": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "heldout-015",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "single_ship",
+    "request": "Ship 2 units of EVAL-015 to EVAL-DOCK-0",
+    "initial": {
+      "available": {
+        "EVAL-015": 10,
+        "EVAL-SPARE-015": 9
+      },
+      "reserved": {
+        "EVAL-015": 0,
+        "EVAL-SPARE-015": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-015": 8,
+        "EVAL-SPARE-015": 9
+      },
+      "reserved": {
+        "EVAL-015": 0,
+        "EVAL-SPARE-015": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-0": {
+          "EVAL-015": 2
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-016",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "split_ship",
+    "request": "Ship 3 units of EVAL-016 to EVAL-DOCK-1; Ship 1 units of EVAL-016 to EVAL-BACKUP-0",
+    "initial": {
+      "available": {
+        "EVAL-016": 13,
+        "EVAL-SPARE-016": 9
+      },
+      "reserved": {
+        "EVAL-016": 0,
+        "EVAL-SPARE-016": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-016": 9,
+        "EVAL-SPARE-016": 9
+      },
+      "reserved": {
+        "EVAL-016": 0,
+        "EVAL-SPARE-016": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-1": {
+          "EVAL-016": 3
+        },
+        "EVAL-BACKUP-0": {
+          "EVAL-016": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-017",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "hold_release",
+    "request": "Hold then release 4 units of EVAL-017",
+    "initial": {
+      "available": {
+        "EVAL-017": 16,
+        "EVAL-SPARE-017": 9
+      },
+      "reserved": {
+        "EVAL-017": 0,
+        "EVAL-SPARE-017": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-017": 16,
+        "EVAL-SPARE-017": 9
+      },
+      "reserved": {
+        "EVAL-017": 0,
+        "EVAL-SPARE-017": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "EVAL-017": 12,
+          "EVAL-SPARE-017": 9
+        },
+        "reserved": {
+          "EVAL-017": 4,
+          "EVAL-SPARE-017": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "heldout-018",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "single_ship",
+    "request": "Ship 5 units of EVAL-018 to EVAL-DOCK-3",
+    "initial": {
+      "available": {
+        "EVAL-018": 19,
+        "EVAL-SPARE-018": 9
+      },
+      "reserved": {
+        "EVAL-018": 0,
+        "EVAL-SPARE-018": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-018": 14,
+        "EVAL-SPARE-018": 9
+      },
+      "reserved": {
+        "EVAL-018": 0,
+        "EVAL-SPARE-018": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-3": {
+          "EVAL-018": 5
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-019",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "split_ship",
+    "request": "Ship 6 units of EVAL-019 to EVAL-DOCK-4; Ship 1 units of EVAL-019 to EVAL-BACKUP-3",
+    "initial": {
+      "available": {
+        "EVAL-019": 22,
+        "EVAL-SPARE-019": 9
+      },
+      "reserved": {
+        "EVAL-019": 0,
+        "EVAL-SPARE-019": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-019": 15,
+        "EVAL-SPARE-019": 9
+      },
+      "reserved": {
+        "EVAL-019": 0,
+        "EVAL-SPARE-019": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-4": {
+          "EVAL-019": 6
+        },
+        "EVAL-BACKUP-3": {
+          "EVAL-019": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-020",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "hold_release",
+    "request": "Hold then release 7 units of EVAL-020",
+    "initial": {
+      "available": {
+        "EVAL-020": 25,
+        "EVAL-SPARE-020": 9
+      },
+      "reserved": {
+        "EVAL-020": 0,
+        "EVAL-SPARE-020": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-020": 25,
+        "EVAL-SPARE-020": 9
+      },
+      "reserved": {
+        "EVAL-020": 0,
+        "EVAL-SPARE-020": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "EVAL-020": 18,
+          "EVAL-SPARE-020": 9
+        },
+        "reserved": {
+          "EVAL-020": 7,
+          "EVAL-SPARE-020": 0
+        },
+        "shipments": {}
+      }
+    ]
+  },
+  {
+    "id": "heldout-021",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "single_ship",
+    "request": "Ship 1 units of EVAL-021 to EVAL-DOCK-1",
+    "initial": {
+      "available": {
+        "EVAL-021": 7,
+        "EVAL-SPARE-021": 9
+      },
+      "reserved": {
+        "EVAL-021": 0,
+        "EVAL-SPARE-021": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-021": 6,
+        "EVAL-SPARE-021": 9
+      },
+      "reserved": {
+        "EVAL-021": 0,
+        "EVAL-SPARE-021": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-1": {
+          "EVAL-021": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-022",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "split_ship",
+    "request": "Ship 2 units of EVAL-022 to EVAL-DOCK-2; Ship 1 units of EVAL-022 to EVAL-BACKUP-2",
+    "initial": {
+      "available": {
+        "EVAL-022": 10,
+        "EVAL-SPARE-022": 9
+      },
+      "reserved": {
+        "EVAL-022": 0,
+        "EVAL-SPARE-022": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-022": 7,
+        "EVAL-SPARE-022": 9
+      },
+      "reserved": {
+        "EVAL-022": 0,
+        "EVAL-SPARE-022": 0
+      },
+      "shipments": {
+        "EVAL-DOCK-2": {
+          "EVAL-022": 2
+        },
+        "EVAL-BACKUP-2": {
+          "EVAL-022": 1
+        }
+      }
+    },
+    "required_states": []
+  },
+  {
+    "id": "heldout-023",
+    "split": "heldout",
+    "schema": "heldout",
+    "family": "hold_release",
+    "request": "Hold then release 3 units of EVAL-023",
+    "initial": {
+      "available": {
+        "EVAL-023": 13,
+        "EVAL-SPARE-023": 9
+      },
+      "reserved": {
+        "EVAL-023": 0,
+        "EVAL-SPARE-023": 0
+      },
+      "shipments": {}
+    },
+    "goal": {
+      "available": {
+        "EVAL-023": 13,
+        "EVAL-SPARE-023": 9
+      },
+      "reserved": {
+        "EVAL-023": 0,
+        "EVAL-SPARE-023": 0
+      },
+      "shipments": {}
+    },
+    "required_states": [
+      {
+        "available": {
+          "EVAL-023": 10,
+          "EVAL-SPARE-023": 9
+        },
+        "reserved": {
+          "EVAL-023": 3,
+          "EVAL-SPARE-023": 0
+        },
+        "shipments": {}
+      }
+    ]
+  }
+]

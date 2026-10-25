@@ -1,0 +1,11 @@
+{
+  "mode": "built-in image_gen",
+  "prompts": [
+    {
+      "asset": "assets/concept-filter.png",
+      "prompt": "Use case: ads-marketing. Asset type: English open-source project campaign concept illustration, landscape. Primary request: A sophisticated editorial illustration for ToolCrop, a tool-use dataset recipe that checks actual execution. Show a row of beautiful paper instruction cards flowing through a small transparent mechanical test rig; some cards emerge as sturdy green building blocks, others are neatly diverted as amber paper slips. This is a conceptual metaphor, not software UI or a measured chart. Style: tactile paper sculpture, precise isometric engineering, dark navy background, mint green and warm amber accents, soft studio light, generous negative space. Text verbatim: 'ToolCrop' and beneath it 'Plausible is only the start'. No other text, no logos of other brands, no numbers or statistics, no testimonials. Clean readable English typography.",
+      "source": "/Users/g/.codex/generated_images/01a1746d-ef1b-7162-b7ee-29408e99c3c4/exec-f730e1c7-198e-495a-bda7-256c1aa46dd5.png",
+      "inspection": "Text reads ToolCrop and Plausible is only the start. Conceptual paper-card test rig; no metrics or UI claims."
+    }
+  ]
+}

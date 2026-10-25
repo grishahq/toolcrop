@@ -1,0 +1,502 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>ToolCrop | Inventory execution report</title><style>
+body{font:18px system-ui;background:#0c1720;color:#e7eef3;max-width:1100px;margin:48px auto;padding:0 28px}
+h1{font-size:46px;letter-spacing:-1px}h2{color:#7ce3ba}p{line-height:1.6}table{width:100%;border-collapse:collapse}
+th,td{padding:14px;text-align:left;border-bottom:1px solid #34434d}th{color:#7ce3ba}pre{white-space:pre-wrap;font:13px monospace}
+small{color:#bccad4}details{margin:16px 0;padding:14px;background:#142630}.pill{color:#7ce3ba;font-weight:700}
+</style><body><span class="pill">TOOLCROP · EXPERIMENTAL v0.1.0</span><h1>Plausible calls. Executable evidence.</h1>
+<p>Inventory recipe · 100 development tasks · 24 held-out tasks · 620 evaluated trajectories.</p>
+<p>Schema-only admission keeps <strong>496</strong> candidates. Execution plus independent final-state checks keeps
+<strong>124</strong>. Fixed reference planner and any included predefined corruptions; see source counts. No model generation or training experiment.</p>
+<h2>Same candidate pool, different checks</h2><table><thead><tr><th>Candidate source</th><th>Total</th>
+<th>Schema valid</th><th>Executable</th><th>Goal met</th></tr></thead>
+<tbody><tr><td>missing_required_step</td><td>124</td><td>124</td><td>0</td><td>0</td></tr><tr><td>reference_planner</td><td>124</td><td>124</td><td>124</td><td>124</td></tr><tr><td>unavailable_tool</td><td>124</td><td>0</td><td>0</td><td>0</td></tr><tr><td>wrong_argument</td><td>124</td><td>124</td><td>124</td><td>0</td></tr><tr><td>wrong_destination</td><td>124</td><td>124</td><td>124</td><td>0</td></tr></tbody></table><h2>Coverage and limits</h2><pre>{
+  &quot;development&quot;: {
+    &quot;candidates&quot;: 500,
+    &quot;schema_valid&quot;: 400,
+    &quot;executable&quot;: 300,
+    &quot;accepted&quot;: 100,
+    &quot;acceptance_rate&quot;: 0.2,
+    &quot;executable_success_rate&quot;: 0.6,
+    &quot;rejection_reasons&quot;: {
+      &quot;call_0:insufficient_reserved&quot;: 100,
+      &quot;call_0:unavailable_tool&quot;: 100,
+      &quot;final_available_mismatch&quot;: 267,
+      &quot;final_reserved_mismatch&quot;: 100,
+      &quot;final_shipments_mismatch&quot;: 234,
+      &quot;required_state_not_reached&quot;: 94
+    },
+    &quot;task_coverage&quot;: {
+      &quot;accepted_unique_tasks&quot;: 100,
+      &quot;specified_tasks&quot;: 100,
+      &quot;rate&quot;: 1.0
+    },
+    &quot;family_coverage&quot;: {
+      &quot;hold_release&quot;: 33,
+      &quot;single_ship&quot;: 34,
+      &quot;split_ship&quot;: 33
+    }
+  },
+  &quot;heldout&quot;: {
+    &quot;candidates&quot;: 120,
+    &quot;schema_valid&quot;: 96,
+    &quot;executable&quot;: 72,
+    &quot;accepted&quot;: 24,
+    &quot;acceptance_rate&quot;: 0.2,
+    &quot;executable_success_rate&quot;: 0.6,
+    &quot;rejection_reasons&quot;: {
+      &quot;call_0:insufficient_reserved&quot;: 24,
+      &quot;call_0:unavailable_tool&quot;: 24,
+      &quot;final_available_mismatch&quot;: 64,
+      &quot;final_reserved_mismatch&quot;: 24,
+      &quot;final_shipments_mismatch&quot;: 56,
+      &quot;required_state_not_reached&quot;: 23
+    },
+    &quot;task_coverage&quot;: {
+      &quot;accepted_unique_tasks&quot;: 24,
+      &quot;specified_tasks&quot;: 24,
+      &quot;rate&quot;: 1.0
+    },
+    &quot;family_coverage&quot;: {
+      &quot;hold_release&quot;: 8,
+      &quot;single_ship&quot;: 8,
+      &quot;split_ship&quot;: 8
+    }
+  }
+}</pre>
+<p>124 templated tasks in one toy environment; counts are descriptive, not independent statistical trials. Held-out tasks have disjoint item identifiers and tool schemas but share task grammar and families. Offline planner supports both schemas explicitly. This is not evidence of model generalization or quality gain. Accepted means exact declared final state and required checkpoints were reached without error; policy optimality is not judged.</p><h2>Inspect actual records</h2><details><summary>development-000:missing_required_step: REJECT</summary><pre>{
+  &quot;candidate_id&quot;: &quot;development-000:missing_required_step&quot;,
+  &quot;task_id&quot;: &quot;development-000&quot;,
+  &quot;split&quot;: &quot;development&quot;,
+  &quot;family&quot;: &quot;single_ship&quot;,
+  &quot;schema&quot;: &quot;development&quot;,
+  &quot;source&quot;: &quot;missing_required_step&quot;,
+  &quot;request&quot;: &quot;Ship 1 units of DEV-000 to DEV-DOCK-0&quot;,
+  &quot;initial&quot;: {
+    &quot;available&quot;: {
+      &quot;DEV-000&quot;: 7,
+      &quot;DEV-SPARE-000&quot;: 9
+    },
+    &quot;reserved&quot;: {
+      &quot;DEV-000&quot;: 0,
+      &quot;DEV-SPARE-000&quot;: 0
+    },
+    &quot;shipments&quot;: {}
+  },
+  &quot;calls&quot;: [
+    {
+      &quot;name&quot;: &quot;ship&quot;,
+      &quot;arguments&quot;: {
+        &quot;sku&quot;: &quot;DEV-000&quot;,
+        &quot;quantity&quot;: 1,
+        &quot;destination&quot;: &quot;DEV-DOCK-0&quot;
+      }
+    }
+  ],
+  &quot;schema_valid&quot;: true,
+  &quot;executable&quot;: false,
+  &quot;accepted&quot;: false,
+  &quot;reasons&quot;: [
+    &quot;call_0:insufficient_reserved&quot;,
+    &quot;final_available_mismatch&quot;,
+    &quot;final_shipments_mismatch&quot;
+  ],
+  &quot;trace&quot;: [],
+  &quot;final&quot;: {
+    &quot;available&quot;: {
+      &quot;DEV-000&quot;: 7,
+      &quot;DEV-SPARE-000&quot;: 9
+    },
+    &quot;reserved&quot;: {
+      &quot;DEV-000&quot;: 0,
+      &quot;DEV-SPARE-000&quot;: 0
+    },
+    &quot;shipments&quot;: {}
+  }
+}</pre></details><details><summary>development-000:reference: ACCEPT</summary><pre>{
+  &quot;candidate_id&quot;: &quot;development-000:reference&quot;,
+  &quot;task_id&quot;: &quot;development-000&quot;,
+  &quot;split&quot;: &quot;development&quot;,
+  &quot;family&quot;: &quot;single_ship&quot;,
+  &quot;schema&quot;: &quot;development&quot;,
+  &quot;source&quot;: &quot;reference_planner&quot;,
+  &quot;request&quot;: &quot;Ship 1 units of DEV-000 to DEV-DOCK-0&quot;,
+  &quot;initial&quot;: {
+    &quot;available&quot;: {
+      &quot;DEV-000&quot;: 7,
+      &quot;DEV-SPARE-000&quot;: 9
+    },
+    &quot;reserved&quot;: {
+      &quot;DEV-000&quot;: 0,
+      &quot;DEV-SPARE-000&quot;: 0
+    },
+    &quot;shipments&quot;: {}
+  },
+  &quot;calls&quot;: [
+    {
+      &quot;name&quot;: &quot;reserve&quot;,
+      &quot;arguments&quot;: {
+        &quot;sku&quot;: &quot;DEV-000&quot;,
+        &quot;quantity&quot;: 1
+      }
+    },
+    {
+      &quot;name&quot;: &quot;ship&quot;,
+      &quot;arguments&quot;: {
+        &quot;sku&quot;: &quot;DEV-000&quot;,
+        &quot;quantity&quot;: 1,
+        &quot;destination&quot;: &quot;DEV-DOCK-0&quot;
+      }
+    }
+  ],
+  &quot;schema_valid&quot;: true,
+  &quot;executable&quot;: true,
+  &quot;accepted&quot;: true,
+  &quot;reasons&quot;: [],
+  &quot;trace&quot;: [
+    {
+      &quot;call&quot;: {
+        &quot;name&quot;: &quot;reserve&quot;,
+        &quot;arguments&quot;: {
+          &quot;sku&quot;: &quot;DEV-000&quot;,
+          &quot;quantity&quot;: 1
+        }
+      },
+      &quot;result&quot;: {
+        &quot;ok&quot;: true,
+        &quot;state&quot;: {
+          &quot;available&quot;: {
+            &quot;DEV-000&quot;: 6,
+            &quot;DEV-SPARE-000&quot;: 9
+          },
+          &quot;reserved&quot;: {
+            &quot;DEV-000&quot;: 1,
+            &quot;DEV-SPARE-000&quot;: 0
+          },
+          &quot;shipments&quot;: {}
+        }
+      }
+    },
+    {
+      &quot;call&quot;: {
+        &quot;name&quot;: &quot;ship&quot;,
+        &quot;arguments&quot;: {
+          &quot;sku&quot;: &quot;DEV-000&quot;,
+          &quot;quantity&quot;: 1,
+          &quot;destination&quot;: &quot;DEV-DOCK-0&quot;
+        }
+      },
+      &quot;result&quot;: {
+        &quot;ok&quot;: true,
+        &quot;state&quot;: {
+          &quot;available&quot;: {
+            &quot;DEV-000&quot;: 6,
+            &quot;DEV-SPARE-000&quot;: 9
+          },
+          &quot;reserved&quot;: {
+            &quot;DEV-000&quot;: 0,
+            &quot;DEV-SPARE-000&quot;: 0
+          },
+          &quot;shipments&quot;: {
+            &quot;DEV-DOCK-0&quot;: {
+              &quot;DEV-000&quot;: 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  &quot;final&quot;: {
+    &quot;available&quot;: {
+      &quot;DEV-000&quot;: 6,
+      &quot;DEV-SPARE-000&quot;: 9
+    },
+    &quot;reserved&quot;: {
+      &quot;DEV-000&quot;: 0,
+      &quot;DEV-SPARE-000&quot;: 0
+    },
+    &quot;shipments&quot;: {
+      &quot;DEV-DOCK-0&quot;: {
+        &quot;DEV-000&quot;: 1
+      }
+    }
+  }
+}</pre></details><details><summary>development-000:unavailable_tool: REJECT</summary><pre>{
+  &quot;candidate_id&quot;: &quot;development-000:unavailable_tool&quot;,
+  &quot;task_id&quot;: &quot;development-000&quot;,
+  &quot;split&quot;: &quot;development&quot;,
+  &quot;family&quot;: &quot;single_ship&quot;,
+  &quot;schema&quot;: &quot;development&quot;,
+  &quot;source&quot;: &quot;unavailable_tool&quot;,
+  &quot;request&quot;: &quot;Ship 1 units of DEV-000 to DEV-DOCK-0&quot;,
+  &quot;initial&quot;: {
+    &quot;available&quot;: {
+      &quot;DEV-000&quot;: 7,
+      &quot;DEV-SPARE-000&quot;: 9
+    },
+    &quot;reserved&quot;: {
+      &quot;DEV-000&quot;: 0,
+      &quot;DEV-SPARE-000&quot;: 0
+    },
+    &quot;shipments&quot;: {}
+  },
+  &quot;calls&quot;: [
+    {
+      &quot;name&quot;: &quot;delete_database&quot;,
+      &quot;arguments&quot;: {
+        &quot;sku&quot;: &quot;DEV-000&quot;,
+        &quot;quantity&quot;: 1
+      }
+    },
+    {
+      &quot;name&quot;: &quot;ship&quot;,
+      &quot;arguments&quot;: {
+        &quot;sku&quot;: &quot;DEV-000&quot;,
+        &quot;quantity&quot;: 1,
+        &quot;destination&quot;: &quot;DEV-DOCK-0&quot;
+      }
+    }
+  ],
+  &quot;schema_valid&quot;: false,
+  &quot;executable&quot;: false,
+  &quot;accepted&quot;: false,
+  &quot;reasons&quot;: [
+    &quot;call_0:unavailable_tool&quot;,
+    &quot;final_available_mismatch&quot;,
+    &quot;final_shipments_mismatch&quot;
+  ],
+  &quot;trace&quot;: [],
+  &quot;final&quot;: {
+    &quot;available&quot;: {
+      &quot;DEV-000&quot;: 7,
+      &quot;DEV-SPARE-000&quot;: 9
+    },
+    &quot;reserved&quot;: {
+      &quot;DEV-000&quot;: 0,
+      &quot;DEV-SPARE-000&quot;: 0
+    },
+    &quot;shipments&quot;: {}
+  }
+}</pre></details><details><summary>development-000:wrong_argument: REJECT</summary><pre>{
+  &quot;candidate_id&quot;: &quot;development-000:wrong_argument&quot;,
+  &quot;task_id&quot;: &quot;development-000&quot;,
+  &quot;split&quot;: &quot;development&quot;,
+  &quot;family&quot;: &quot;single_ship&quot;,
+  &quot;schema&quot;: &quot;development&quot;,
+  &quot;source&quot;: &quot;wrong_argument&quot;,
+  &quot;request&quot;: &quot;Ship 1 units of DEV-000 to DEV-DOCK-0&quot;,
+  &quot;initial&quot;: {
+    &quot;available&quot;: {
+      &quot;DEV-000&quot;: 7,
+      &quot;DEV-SPARE-000&quot;: 9
+    },
+    &quot;reserved&quot;: {
+      &quot;DEV-000&quot;: 0,
+      &quot;DEV-SPARE-000&quot;: 0
+    },
+    &quot;shipments&quot;: {}
+  },
+  &quot;calls&quot;: [
+    {
+      &quot;name&quot;: &quot;reserve&quot;,
+      &quot;arguments&quot;: {
+        &quot;sku&quot;: &quot;DEV-000&quot;,
+        &quot;quantity&quot;: 2
+      }
+    },
+    {
+      &quot;name&quot;: &quot;ship&quot;,
+      &quot;arguments&quot;: {
+        &quot;sku&quot;: &quot;DEV-000&quot;,
+        &quot;quantity&quot;: 1,
+        &quot;destination&quot;: &quot;DEV-DOCK-0&quot;
+      }
+    }
+  ],
+  &quot;schema_valid&quot;: true,
+  &quot;executable&quot;: true,
+  &quot;accepted&quot;: false,
+  &quot;reasons&quot;: [
+    &quot;final_available_mismatch&quot;,
+    &quot;final_reserved_mismatch&quot;
+  ],
+  &quot;trace&quot;: [
+    {
+      &quot;call&quot;: {
+        &quot;name&quot;: &quot;reserve&quot;,
+        &quot;arguments&quot;: {
+          &quot;sku&quot;: &quot;DEV-000&quot;,
+          &quot;quantity&quot;: 2
+        }
+      },
+      &quot;result&quot;: {
+        &quot;ok&quot;: true,
+        &quot;state&quot;: {
+          &quot;available&quot;: {
+            &quot;DEV-000&quot;: 5,
+            &quot;DEV-SPARE-000&quot;: 9
+          },
+          &quot;reserved&quot;: {
+            &quot;DEV-000&quot;: 2,
+            &quot;DEV-SPARE-000&quot;: 0
+          },
+          &quot;shipments&quot;: {}
+        }
+      }
+    },
+    {
+      &quot;call&quot;: {
+        &quot;name&quot;: &quot;ship&quot;,
+        &quot;arguments&quot;: {
+          &quot;sku&quot;: &quot;DEV-000&quot;,
+          &quot;quantity&quot;: 1,
+          &quot;destination&quot;: &quot;DEV-DOCK-0&quot;
+        }
+      },
+      &quot;result&quot;: {
+        &quot;ok&quot;: true,
+        &quot;state&quot;: {
+          &quot;available&quot;: {
+            &quot;DEV-000&quot;: 5,
+            &quot;DEV-SPARE-000&quot;: 9
+          },
+          &quot;reserved&quot;: {
+            &quot;DEV-000&quot;: 1,
+            &quot;DEV-SPARE-000&quot;: 0
+          },
+          &quot;shipments&quot;: {
+            &quot;DEV-DOCK-0&quot;: {
+              &quot;DEV-000&quot;: 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  &quot;final&quot;: {
+    &quot;available&quot;: {
+      &quot;DEV-000&quot;: 5,
+      &quot;DEV-SPARE-000&quot;: 9
+    },
+    &quot;reserved&quot;: {
+      &quot;DEV-000&quot;: 1,
+      &quot;DEV-SPARE-000&quot;: 0
+    },
+    &quot;shipments&quot;: {
+      &quot;DEV-DOCK-0&quot;: {
+        &quot;DEV-000&quot;: 1
+      }
+    }
+  }
+}</pre></details><details><summary>development-000:wrong_destination: REJECT</summary><pre>{
+  &quot;candidate_id&quot;: &quot;development-000:wrong_destination&quot;,
+  &quot;task_id&quot;: &quot;development-000&quot;,
+  &quot;split&quot;: &quot;development&quot;,
+  &quot;family&quot;: &quot;single_ship&quot;,
+  &quot;schema&quot;: &quot;development&quot;,
+  &quot;source&quot;: &quot;wrong_destination&quot;,
+  &quot;request&quot;: &quot;Ship 1 units of DEV-000 to DEV-DOCK-0&quot;,
+  &quot;initial&quot;: {
+    &quot;available&quot;: {
+      &quot;DEV-000&quot;: 7,
+      &quot;DEV-SPARE-000&quot;: 9
+    },
+    &quot;reserved&quot;: {
+      &quot;DEV-000&quot;: 0,
+      &quot;DEV-SPARE-000&quot;: 0
+    },
+    &quot;shipments&quot;: {}
+  },
+  &quot;calls&quot;: [
+    {
+      &quot;name&quot;: &quot;reserve&quot;,
+      &quot;arguments&quot;: {
+        &quot;sku&quot;: &quot;DEV-000&quot;,
+        &quot;quantity&quot;: 1
+      }
+    },
+    {
+      &quot;name&quot;: &quot;ship&quot;,
+      &quot;arguments&quot;: {
+        &quot;sku&quot;: &quot;DEV-000&quot;,
+        &quot;quantity&quot;: 1,
+        &quot;destination&quot;: &quot;UNREQUESTED&quot;
+      }
+    }
+  ],
+  &quot;schema_valid&quot;: true,
+  &quot;executable&quot;: true,
+  &quot;accepted&quot;: false,
+  &quot;reasons&quot;: [
+    &quot;final_shipments_mismatch&quot;
+  ],
+  &quot;trace&quot;: [
+    {
+      &quot;call&quot;: {
+        &quot;name&quot;: &quot;reserve&quot;,
+        &quot;arguments&quot;: {
+          &quot;sku&quot;: &quot;DEV-000&quot;,
+          &quot;quantity&quot;: 1
+        }
+      },
+      &quot;result&quot;: {
+        &quot;ok&quot;: true,
+        &quot;state&quot;: {
+          &quot;available&quot;: {
+            &quot;DEV-000&quot;: 6,
+            &quot;DEV-SPARE-000&quot;: 9
+          },
+          &quot;reserved&quot;: {
+            &quot;DEV-000&quot;: 1,
+            &quot;DEV-SPARE-000&quot;: 0
+          },
+          &quot;shipments&quot;: {}
+        }
+      }
+    },
+    {
+      &quot;call&quot;: {
+        &quot;name&quot;: &quot;ship&quot;,
+        &quot;arguments&quot;: {
+          &quot;sku&quot;: &quot;DEV-000&quot;,
+          &quot;quantity&quot;: 1,
+          &quot;destination&quot;: &quot;UNREQUESTED&quot;
+        }
+      },
+      &quot;result&quot;: {
+        &quot;ok&quot;: true,
+        &quot;state&quot;: {
+          &quot;available&quot;: {
+            &quot;DEV-000&quot;: 6,
+            &quot;DEV-SPARE-000&quot;: 9
+          },
+          &quot;reserved&quot;: {
+            &quot;DEV-000&quot;: 0,
+            &quot;DEV-SPARE-000&quot;: 0
+          },
+          &quot;shipments&quot;: {
+            &quot;UNREQUESTED&quot;: {
+              &quot;DEV-000&quot;: 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  &quot;final&quot;: {
+    &quot;available&quot;: {
+      &quot;DEV-000&quot;: 6,
+      &quot;DEV-SPARE-000&quot;: 9
+    },
+    &quot;reserved&quot;: {
+      &quot;DEV-000&quot;: 0,
+      &quot;DEV-SPARE-000&quot;: 0
+    },
+    &quot;shipments&quot;: {
+      &quot;UNREQUESTED&quot;: {
+        &quot;DEV-000&quot;: 1
+      }
+    }
+  }
+}</pre></details>
+<small>Built on Bespoke Labs Curator. No network, filesystem or shell tools are exposed to candidates.</small></body></html>

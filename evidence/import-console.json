@@ -1,0 +1,33 @@
+{
+  "output": ".release-check/imported",
+  "overall": {
+    "candidates": 3,
+    "schema_valid": 3,
+    "executable": 3,
+    "accepted": 3,
+    "acceptance_rate": 1.0,
+    "executable_success_rate": 1.0,
+    "rejection_reasons": {}
+  },
+  "by_split": {
+    "development": {
+      "candidates": 3,
+      "schema_valid": 3,
+      "executable": 3,
+      "accepted": 3,
+      "acceptance_rate": 1.0,
+      "executable_success_rate": 1.0,
+      "rejection_reasons": {},
+      "task_coverage": {
+        "accepted_unique_tasks": 3,
+        "specified_tasks": 100,
+        "rate": 0.03
+      },
+      "family_coverage": {
+        "hold_release": 1,
+        "single_ship": 1,
+        "split_ship": 1
+      }
+    }
+  }
+}

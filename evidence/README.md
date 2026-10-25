@@ -1,0 +1,9 @@
+# Reproducible release evidence
+
+Run `toolcrop demo --output reproduced` from the release tag or installed wheel; compare `checksums.json` with `inventory-v1/checksums.json`. `demo-console.json` is actual CLI output. `inventory-v1` contains real simulator traces, accepted/rejected JSONL, split chat exports, reports and SHA-256 output digests. All observations use deterministic reference plans and controlled corruptions; no model calls or training experiments.
+
+The methodology and formulas are frozen in `../toolcrop_docs/DATA_CARD.md`. `../scripts/plot_evidence.py` plots the exported JSON counts with Matplotlib. `../campaign/assets/real-report-screenshot.jpg` is a genuine browser screenshot of the generated report, captured at 1280×720 after checking the rendered table. `filter-comparison.png` is a plotted result chart, not generated art.
+
+`validation-tests.txt` records recipe tests plus retained Curator prompt-formatting, dataset-conversion, namespace and database-schema checks. Full upstream provider/GPU integration suites were not run. `lint.txt` records checks on added recipe code. `build.txt` records wheel/sdist construction. Clean artifact installation and published-release readback are recorded separately before completion.
+
+Independent read-only review identified four issues: a hold/release false accept when only final state was checked, nested dataset conversion adding unrelated inventory keys, an offline adapter test incorrectly invoking provider setup, and hardcoded provenance wording. Fixes add trusted intermediate checkpoints and regression cases, serialize public input per row, stub provider rate-limit IO in tests, and report source-aware methodology. Review evidence is kept in `review.md` after recheck. This is a correctness review, not a full security audit.

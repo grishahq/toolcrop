@@ -1,0 +1,52 @@
+{
+  "project": "ToolCrop",
+  "maturity": "experimental",
+  "plan": {
+    "state": "complete",
+    "path": "IMPLEMENTATION_PLAN.md"
+  },
+  "implementation": {
+    "state": "complete",
+    "scope": "contained inventory recipe, trusted final and intermediate predicates, offline planner, Curator adapter, exports and coverage"
+  },
+  "validation": {
+    "state": "complete",
+    "evidence": [
+      "evidence/validation-tests.txt",
+      "evidence/lint.txt",
+      "evidence/review.md",
+      "evidence/inventory-v1/report.json"
+    ],
+    "independent_review": "four findings fixed and rechecked; no correctness blockers",
+    "clean_artifact_install": "passed",
+    "tests_passed": 197,
+    "lint": "passed",
+    "limitations": [
+      "No live provider inference or model training experiment",
+      "Full upstream provider/GPU suites not run"
+    ]
+  },
+  "github_release": {
+    "state": "repository_created",
+    "repository": "https://github.com/grishahq/toolcrop"
+  },
+  "campaign": {
+    "prepared": false,
+    "scheduled": false,
+    "published": false,
+    "assets": [
+      "campaign/assets/concept-filter.png",
+      "campaign/assets/concept-destination.png",
+      "campaign/assets/real-report-screenshot.jpg",
+      "campaign/assets/filter-comparison.png"
+    ],
+    "account_readback": {
+      "linkedin": "Gregory Gvadzabia / https://www.linkedin.com/in/gregogv/"
+    }
+  },
+  "blockers": [],
+  "next_actions": [
+    "Publish versioned experimental release",
+    "Finalize campaign and native scheduling"
+  ]
+}
